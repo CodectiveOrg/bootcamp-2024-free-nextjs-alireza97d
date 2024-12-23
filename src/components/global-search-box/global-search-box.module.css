@@ -26,6 +26,8 @@
 
     border: none;
 
+    min-inline-size: 0;
+
     &:focus {
       outline: none;
     }

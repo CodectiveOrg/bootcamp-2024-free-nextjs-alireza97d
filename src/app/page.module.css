@@ -5,6 +5,8 @@
   gap: 2rem;
 
   min-block-size: 100%;
+  
+  grid-template-columns: minmax(0, 1fr);
 
   h1 {
     display: inline-flex;
