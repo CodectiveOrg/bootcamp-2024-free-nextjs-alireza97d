@@ -1,7 +1,7 @@
 export const menu = [
-    { title: "خانه", href: "" },
-    { title: "جستجو", href: "search" },
-    { title: "پزشکان", href: "doctors" },
+  { title: "خانه", href: "" },
+  { title: "جستجو", href: "search" },
+  { title: "پزشکان", href: "doctors" },
 ];
 
-export type menuType = Record<string, string>
+export type menuType = Record<string, string>;
