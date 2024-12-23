@@ -67,7 +67,8 @@ export default function FooterComponent(): ReactElement {
             </div>
             <p className={styles.copy}>
                 تمامی حقوق مادی و معنوی این وب‌سایت، خدمات و محتوای مربوط به آن متعلق به
-                من می‌باشد!
+                &nbsp;<strong>سامانه دکتر من</strong>&nbsp;
+                می‌باشد!
             </p>
         </footer>
     );
