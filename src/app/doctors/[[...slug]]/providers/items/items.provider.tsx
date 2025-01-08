@@ -23,10 +23,8 @@
 
 //     const [filteredItems, setFilteredItems] = useState<DoctorModel[]>([]);
 
-
 //     const splitedDoctors = useCallback((item: DoctorModel): DoctorModel[] => {
 
-        
 //         // if (filters.even && item.value % 2 === 0) {
 //         //     return true;
 //         // }
@@ -47,11 +45,9 @@
 
 //     }, [filters])
 
-
 //     useEffect(() => {
 //         setFilteredItems(items.filter(splitedDoctors))
 //     }, [splitedDoctors, items])
-
 
 //     return (
 //         <ItemsContext.Provider value={{ filteredItems }}>
