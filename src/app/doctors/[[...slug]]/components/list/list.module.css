@@ -1,0 +1,4 @@
+.container > a:not(:last-child) {
+    margin-bottom: 1rem;
+    display: block;
+}
