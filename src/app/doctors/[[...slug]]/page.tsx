@@ -31,10 +31,9 @@ const SearchPage: React.FC<SearchPageType> = ({
   params,
   searchParams,
 }): ReactElement => {
-
   const getValueFromUrl = useMemo(
     () => convertListToObject(params.slug, searchParams || {}),
-    [params.slug, searchParams]
+    [params.slug, searchParams],
   );
 
   const filteredDoctors: DoctorModel[] = useMemo(() => {
@@ -50,18 +49,23 @@ const SearchPage: React.FC<SearchPageType> = ({
         return false;
       }
 
-      if (getValueFromUrl.degree && doctor.degree.en !== getValueFromUrl.degree) {
+      if (
+        getValueFromUrl.degree &&
+        doctor.degree.en !== getValueFromUrl.degree
+      ) {
         return false;
       }
 
-      if (getValueFromUrl.gender && doctor.gender.en !== getValueFromUrl.gender) {
+      if (
+        getValueFromUrl.gender &&
+        doctor.gender.en !== getValueFromUrl.gender
+      ) {
         return false;
       }
 
       return true;
     });
   }, [getValueFromUrl]);
-
 
   return (
     <FiltersProvider>
