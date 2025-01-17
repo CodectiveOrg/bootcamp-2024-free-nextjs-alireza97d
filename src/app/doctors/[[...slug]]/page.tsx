@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, useMemo } from "react";
 
 import FilterComponent from "./components/filter/filter.component";
 import ListComponent from "./components/list/list.component";
@@ -31,30 +31,37 @@ const SearchPage: React.FC<SearchPageType> = ({
   params,
   searchParams,
 }): ReactElement => {
-  const getValueFromUrl = convertListToObject(params.slug, searchParams || {});
 
-  const filteredDoctors: DoctorModel[] = doctors.filter((doctor) => {
-    if (getValueFromUrl.city && doctor.city.en !== getValueFromUrl.city) {
-      return false;
-    }
+  const getValueFromUrl = useMemo(
+    () => convertListToObject(params.slug, searchParams || {}),
+    [params.slug, searchParams]
+  );
 
-    if (
-      getValueFromUrl.specialty &&
-      doctor.specialty.en !== getValueFromUrl.specialty
-    ) {
-      return false;
-    }
+  const filteredDoctors: DoctorModel[] = useMemo(() => {
+    return doctors.filter((doctor) => {
+      if (getValueFromUrl.city && doctor.city.en !== getValueFromUrl.city) {
+        return false;
+      }
 
-    if (getValueFromUrl.degree && doctor.degree.en !== getValueFromUrl.degree) {
-      return false;
-    }
+      if (
+        getValueFromUrl.specialty &&
+        doctor.specialty.en !== getValueFromUrl.specialty
+      ) {
+        return false;
+      }
 
-    if (getValueFromUrl.gender && doctor.gender.en !== getValueFromUrl.gender) {
-      return false;
-    }
+      if (getValueFromUrl.degree && doctor.degree.en !== getValueFromUrl.degree) {
+        return false;
+      }
 
-    return true;
-  });
+      if (getValueFromUrl.gender && doctor.gender.en !== getValueFromUrl.gender) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [getValueFromUrl]);
+
 
   return (
     <FiltersProvider>
