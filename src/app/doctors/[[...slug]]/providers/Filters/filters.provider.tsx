@@ -8,13 +8,11 @@ import { GenderEnums } from "@/enums/gender";
 
 type ContextValue = {
   changeFilter: (key: FilterEnums, value: string) => void;
-  // removeFilter: <TKey extends keyof FiltersType>(key: TKey) => void;
   clearAll: () => void;
 };
 
 export const FiltersContext = createContext<ContextValue>({
   changeFilter: () => {},
-  // removeFilter: () => { },
   clearAll: () => {},
 });
 
@@ -48,10 +46,6 @@ const FiltersProvider = ({ children }: Props): ReactElement => {
     const newPathname = segments.join("/");
     replace(`${newPathname}?${params.toString()}`);
   };
-
-  // const removeFilter = <TKey extends keyof FiltersType>(key: TKey): void => {
-
-  // };
 
   const clearAll = (): void => {
     replace("/doctors");
