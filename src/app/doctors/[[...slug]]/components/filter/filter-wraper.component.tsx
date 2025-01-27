@@ -4,7 +4,7 @@ import ClearAllFilterComponent from "./clear-all-filter.component";
 import FilterComponent from "./filter.component";
 
 import { specialties } from "@/models/specialties";
-import { degries } from "@/models/degrees";
+import { degrees } from "@/models/degrees";
 
 import { GenderEnums } from "@/enums/gender";
 import { FilterEnums } from "../../enums/filter.enum";
@@ -36,7 +36,7 @@ const FilterWraperComponent = ({
             <FilterComponent
                 filterName={FilterEnums.DEGREE}
                 title="درجه علمی"
-                options={degries}
+                options={degrees}
                 selectedFilters={selectedFilters}
             />
 

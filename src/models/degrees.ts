@@ -1,7 +1,7 @@
 export type specialtyType = { id: string; en: string; fa: string };
-export type specialtyEnType = (typeof degries)[number]["en"];
+export type specialtyEnType = (typeof degrees)[number]["en"];
 
-export const degries = [
+export const degrees = [
   { id: "degrie-1", en: "expert", fa: "متخصص" },
 
   { id: "degrie-2", en: "fellowship", fa: "فلوشیپ" },
