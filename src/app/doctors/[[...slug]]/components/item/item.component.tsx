@@ -36,7 +36,9 @@ const ItemComponent = ({ item }: Props): ReactElement => {
           <h2 className={styles.name}>{item.name}</h2>
           <p className={styles.brief}>{item.brief}</p>
           <span className={styles.rate}>
-            <MingcuteStarFill color="#FFF200" />
+            <span className={styles.star}>
+              <MingcuteStarFill />
+            </span>
             <span>{item.averageRating}</span>
             &nbsp; ({item.totalVotes} نظر)
           </span>
