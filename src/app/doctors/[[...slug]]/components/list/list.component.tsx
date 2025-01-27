@@ -12,7 +12,6 @@ const ListComponent = ({
 }: {
   doctors: DoctorModel[];
 }): ReactElement => {
-
   if (doctors.length === 0) {
     return <p>متاسفیم. درحال حاظر پزشکی وجود ندارد!</p>;
   }
