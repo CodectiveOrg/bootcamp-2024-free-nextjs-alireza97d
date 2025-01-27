@@ -1,25 +1,14 @@
 import { GenderEnums } from "@/enums/gender";
 
-export interface AcademicDegree {
-  en: string;
+export interface Localized<T extends string = string> {
+  en: T;
   fa: string;
 }
 
-export interface Specialty {
-  en: string;
-  fa: string;
-}
-
-export interface City {
-  en: string;
-  fa: string;
-}
-
-export interface Gender {
-  en: `${GenderEnums}`;
-  fa: string;
-}
-
+export type AcademicDegree = Localized;
+export type Specialty = Localized;
+export type City = Localized;
+export type Gender = Localized<`${GenderEnums}`>;
 export interface Appointment {
   date: string;
   time: string;
