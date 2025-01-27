@@ -3,7 +3,7 @@ import { ReactElement, useMemo } from "react";
 import FilterComponent from "./components/filter/filter.component";
 import ListComponent from "./components/list/list.component";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
-import RemoveAllFilterComponent from "./components/filter/remove-filter.component";
+import RemoveAllFilterComponent from "./components/filter/remove-all-filter.component";
 
 import { specialties } from "@/models/specialties";
 import { degries } from "@/models/degrees";

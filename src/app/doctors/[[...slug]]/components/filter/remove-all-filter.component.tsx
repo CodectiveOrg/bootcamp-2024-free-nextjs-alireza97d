@@ -6,7 +6,7 @@ import { FiltersContext } from "../../providers/Filters/filters.provider";
 
 import CardComponent from "@/components/card/card.component";
 
-import styles from "./remove-filter.module.css";
+import styles from "./remove-all-filter.module.css";
 
 const RemoveAllFilterComponent = (): ReactElement => {
   const { clearAll } = useContext(FiltersContext);
