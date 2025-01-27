@@ -12,20 +12,19 @@ const ListComponent = ({
 }: {
   doctors: DoctorModel[];
 }): ReactElement => {
+
+  if (doctors.length === 0) {
+    return <p>متاسفیم. درحال حاظر پزشکی وجود ندارد!</p>;
+  }
+
   return (
-    <>
-      {doctors.length !== 0 ? (
-        <ul className={styles.container}>
-          {doctors.map((item: DoctorModel) => (
-            <Link key={item.id} href={{ pathname: `/doctor/${item.id}` }}>
-              <ItemComponent item={item} />
-            </Link>
-          ))}
-        </ul>
-      ) : (
-        <p>متاسفیم. درحال حاظر پزشکی وجود ندارد!</p>
-      )}
-    </>
+    <ul className={styles.container}>
+      {doctors.map((item: DoctorModel) => (
+        <Link key={item.id} href={{ pathname: `/doctor/${item.id}` }}>
+          <ItemComponent item={item} />
+        </Link>
+      ))}
+    </ul>
   );
 };
 
