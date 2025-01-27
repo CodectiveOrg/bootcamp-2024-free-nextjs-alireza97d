@@ -43,7 +43,7 @@ const ItemComponent = ({ item }: Props): ReactElement => {
         </div>
       </div>
       <div className={styles.badge}>
-        {item.badges.map((item: string, index: number) => (
+        {item.badges.map((item, index) => (
           <span className={styles.badge_item} key={index}>
             {item}
           </span>
