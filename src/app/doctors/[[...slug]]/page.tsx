@@ -3,7 +3,7 @@ import { ReactElement, useMemo } from "react";
 import FilterComponent from "./components/filter/filter.component";
 import ListComponent from "./components/list/list.component";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
-import RemoveAllFilterComponent from "./components/filter/remove-all-filter.component";
+import ClearAllFilterComponent from "./components/filter/clear-all-filter.component";
 
 import { specialties } from "@/models/specialties";
 import { degries } from "@/models/degrees";
@@ -74,7 +74,7 @@ const SearchPage: React.FC<SearchPageType> = ({
       </div>
       <div className={styles.page}>
         <div className={styles.filters}>
-          {!isEmpty(getValueFromUrl) && <RemoveAllFilterComponent />}
+          {!isEmpty(getValueFromUrl) && <ClearAllFilterComponent />}
 
           <FilterComponent
             filterName={FilterEnums.SPECIALTY}

@@ -6,15 +6,15 @@ import { FiltersContext } from "../../providers/Filters/filters.provider";
 
 import CardComponent from "@/components/card/card.component";
 
-import styles from "./remove-all-filter.module.css";
+import styles from "./clear-all-filter.module.css";
 
-const RemoveAllFilterComponent = (): ReactElement => {
+const ClearAllFilterComponent = (): ReactElement => {
   const { clearAll } = useContext(FiltersContext);
 
   return (
     <CardComponent>
       <div>
-        <button className={styles.remove} onClick={clearAll}>
+        <button className={styles.clear} onClick={clearAll}>
           حذف همه فیلترها
         </button>
       </div>
@@ -22,4 +22,4 @@ const RemoveAllFilterComponent = (): ReactElement => {
   );
 };
 
-export default RemoveAllFilterComponent;
+export default ClearAllFilterComponent;
