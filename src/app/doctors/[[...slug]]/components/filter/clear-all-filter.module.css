@@ -2,11 +2,11 @@
   width: 100%;
   border-radius: var(--border-radius);
 
-  background-color: rgb(188, 67, 67);
+  background-color: var(--color-danger);
 
   cursor: pointer;
 
   &:hover {
-    background-color: rgb(175, 42, 42);
+    background-color: var(--color-danger-darker);
   }
 }
