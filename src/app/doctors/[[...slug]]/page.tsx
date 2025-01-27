@@ -1,19 +1,12 @@
 import { ReactElement, useMemo } from "react";
 
-import FilterComponent from "./components/filter/filter.component";
 import ListComponent from "./components/list/list.component";
 import GlobalSearchBoxComponent from "@/components/global-search-box/global-search-box.component";
-import ClearAllFilterComponent from "./components/filter/clear-all-filter.component";
+import FilterWraperComponent from "./components/filter/filter-wraper.component";
 
-import { specialties } from "@/models/specialties";
-import { degries } from "@/models/degrees";
 import { doctorsData } from "@/models/doctors";
-
-import { GenderEnums } from "@/enums/gender";
-import { FilterEnums } from "./enums/filter.enum";
 import { DoctorModel } from "@/types/doctor.type";
 
-import { isEmpty } from "@/utils/isEmpty";
 import convertListToObject from "@/utils/convertListToObject";
 
 import FiltersProvider from "./providers/Filters/filters.provider";
@@ -73,47 +66,7 @@ const SearchPage: React.FC<SearchPageType> = ({
         <GlobalSearchBoxComponent />
       </div>
       <div className={styles.page}>
-        <div className={styles.filters}>
-          {!isEmpty(getValueFromUrl) && <ClearAllFilterComponent />}
-
-          <FilterComponent
-            filterName={FilterEnums.SPECIALTY}
-            title="تخصص‌ها"
-            options={specialties}
-            selectedFilters={getValueFromUrl}
-          />
-
-          <FilterComponent
-            filterName={FilterEnums.DEGREE}
-            title="درجه علمی"
-            options={degries}
-            selectedFilters={getValueFromUrl}
-          />
-
-          <FilterComponent
-            filterName={FilterEnums.CITY}
-            title="شهر"
-            options={[
-              { id: "ardebil", en: "ardebil", fa: "اردبیل" },
-              { id: "zahedan", en: "zahedan", fa: "زاهدان" },
-              { id: "bandarabas", en: "bandarabas", fa: "بندرعباس" },
-              { id: "rasht", en: "rasht", fa: "رشت" },
-              { id: "tehran", en: "tehran", fa: "تهران" },
-            ]}
-            selectedFilters={getValueFromUrl}
-          />
-
-          <FilterComponent
-            filterName={FilterEnums.GENDER}
-            title="جنسیت"
-            options={[
-              { id: "male", en: GenderEnums.MALE, fa: "مرد" },
-              { id: "female", en: GenderEnums.FEMALE, fa: "زن" },
-              { id: "both", en: GenderEnums.BOTH, fa: "زن و مرد" },
-            ]}
-            selectedFilters={getValueFromUrl}
-          />
-        </div>
+        <FilterWraperComponent selectedFilters={getValueFromUrl} />
         <ListComponent doctors={filteredDoctors} />
       </div>
     </FiltersProvider>
