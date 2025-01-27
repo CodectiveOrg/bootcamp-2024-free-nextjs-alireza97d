@@ -21,6 +21,7 @@
 
   --color-danger: hsl(0, 47.5%, 50.0%);
   --color-danger-darker: hsl(360, 61.5%, 42.5%);
+  --color-warning: hsl(57, 100%, 50%); 
 
   --border-radius: 0.875rem;
 
