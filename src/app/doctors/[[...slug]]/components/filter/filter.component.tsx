@@ -13,14 +13,14 @@ import { FilterEnums } from "../../enums/filter.enum";
 import styles from "./filter.module.css";
 
 type Props = {
-  typeFilter: FilterEnums;
+  filterName: FilterEnums;
   title: string;
   options?: { id: string; en: string; fa: string }[];
   selectedFilters: ResultObject;
 };
 
 const FilterComponent = ({
-  typeFilter,
+  filterName,
   title,
   options = [],
   selectedFilters = {},
@@ -36,7 +36,7 @@ const FilterComponent = ({
             <FilterButtonComponent
               key={option.id}
               isActive={Object.values(selectedFilters).includes(option.en)}
-              onClick={() => changeFilter(typeFilter, option.en)}
+              onClick={() => changeFilter(filterName, option.en)}
             >
               {option.fa}
             </FilterButtonComponent>

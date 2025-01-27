@@ -77,21 +77,21 @@ const SearchPage: React.FC<SearchPageType> = ({
           {!isEmpty(getValueFromUrl) && <RemoveAllFilterComponent />}
 
           <FilterComponent
-            typeFilter={FilterEnums.SPECIALTY}
+            filterName={FilterEnums.SPECIALTY}
             title="تخصص‌ها"
             options={specialties}
             selectedFilters={getValueFromUrl}
           />
 
           <FilterComponent
-            typeFilter={FilterEnums.DEGREE}
+            filterName={FilterEnums.DEGREE}
             title="درجه علمی"
             options={degries}
             selectedFilters={getValueFromUrl}
           />
 
           <FilterComponent
-            typeFilter={FilterEnums.CITY}
+            filterName={FilterEnums.CITY}
             title="شهر"
             options={[
               { id: "ardebil", en: "ardebil", fa: "اردبیل" },
@@ -104,7 +104,7 @@ const SearchPage: React.FC<SearchPageType> = ({
           />
 
           <FilterComponent
-            typeFilter={FilterEnums.GENDER}
+            filterName={FilterEnums.GENDER}
             title="جنسیت"
             options={[
               { id: "male", en: GenderEnums.MALE, fa: "مرد" },
