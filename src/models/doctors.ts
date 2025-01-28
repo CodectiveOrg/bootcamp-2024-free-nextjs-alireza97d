@@ -2,7 +2,7 @@ import { DoctorModel } from "@/types/doctor.type";
 
 export const doctorsData: DoctorModel[] = [
   {
-    id: "97420f0d-b576-4f65-9ffc-a81b4b1b4e77",
+    id: "9ffc",
     name: "پوراندخت جعفري",
     image: "https://cdn.paziresh24.com/getImage/p24/search-women/8cd097208180a48ff5206f6122b9a5a5.jpg?size=150",
     isVerified: true,
@@ -34,7 +34,7 @@ export const doctorsData: DoctorModel[] = [
     },
   },
   {
-    id: "e6719f23-e846-4a95-88f9-c013c5d9cb4f",
+    id: "88f9",
     name: "مجتبی قدسی",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/9b45c32fe70f1321b4b349bc1a5aff9c.jpeg?size=150",
     isVerified: true,
@@ -66,7 +66,7 @@ export const doctorsData: DoctorModel[] = [
     },
   },
   {
-    id: "4a7403d4-e0a2-406c-8dea-3e557bae54d2",
+    id: "406c",
     name: "امیرحسین پورداود",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/ac84246810671c2744de34cb4e938aa2.jpg?size=150",
     isVerified: true,
@@ -97,7 +97,7 @@ export const doctorsData: DoctorModel[] = [
     },
   },
   {
-    id: "06d3a495-160d-4722-815e-286ff5d82ed2",
+    id: "160d",
     name: "اعظم قهساره اردستانی",
     image: "https://cdn.paziresh24.com/getImage/p24/search-women/dc1c321cabe87e09772530d3480d2adc.jpg?size=150",
     isVerified: true,
@@ -129,7 +129,7 @@ export const doctorsData: DoctorModel[] = [
     },
   },
   {
-    id: "7f39ff5b-4c81-4c59-80fa-7872b675bb18",
+    id: "4c81",
     name: "رضا پورعلی",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/c0a4da00da796354da26c3b1ed016ab3.png?size=150",
     isVerified: true,
