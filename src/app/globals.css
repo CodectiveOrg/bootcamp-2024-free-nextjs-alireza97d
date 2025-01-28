@@ -31,6 +31,9 @@
   --color-danger-darker: hsl(10deg 80% 44%);
   --color-danger-opposite: var(--color-gray-99);
 
+  --color-success: hsl(110, 100%, 50%);
+  --color-success-darker: hsl(110, 88%, 34%);
+
   --color-star: hsl(50deg 100% 50%);
 
   --color-border: var(--color-gray-80);
