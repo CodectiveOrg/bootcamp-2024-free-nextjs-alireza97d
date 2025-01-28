@@ -5,15 +5,15 @@ import { notFound } from "next/navigation";
 import InfoCardComponent from "./components/info/info-card.component";
 import AboutComponent from "./components/about/about.component";
 import ReserveComponent from "./components/reserve/reserve.component";
-import LocationComponent from "./components/location/location.component";
+import ContactComponent from "./components/contact/contact.component";
 import ReviewsComponent from "./components/reviews/reviews.component";
 import CounsulationComponent from "./components/counsulation/counsulation.component";
 
 import { DoctorModel } from "@/types/doctor.type";
-
 import { doctorsData } from "@/models/doctors";
 
 import styles from "./page.module.css";
+
 
 type Props = {
     params: {
@@ -62,7 +62,7 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
                 </div>
 
                 <div className="">
-                    <LocationComponent />
+                    <ContactComponent />
                 </div>
             </div>
         </div>
