@@ -17,6 +17,7 @@ export interface Appointment {
 export interface DoctorModel {
   id: string;
   name: string;
+  slug: string;
   image: string;
   isVerified: boolean;
   averageRating: number;

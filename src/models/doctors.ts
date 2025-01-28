@@ -4,6 +4,7 @@ export const doctorsData: DoctorModel[] = [
   {
     id: "9ffc",
     name: "پوراندخت جعفري",
+    slug: "dr-pourandokht-jafari",
     image: "https://cdn.paziresh24.com/getImage/p24/search-women/8cd097208180a48ff5206f6122b9a5a5.jpg?size=150",
     isVerified: true,
     averageRating: 4.99,
@@ -36,6 +37,7 @@ export const doctorsData: DoctorModel[] = [
   {
     id: "88f9",
     name: "مجتبی قدسی",
+    slug: "dr-mojtaba-ghodsi",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/9b45c32fe70f1321b4b349bc1a5aff9c.jpeg?size=150",
     isVerified: true,
     averageRating: 4.92,
@@ -68,6 +70,7 @@ export const doctorsData: DoctorModel[] = [
   {
     id: "406c",
     name: "امیرحسین پورداود",
+    slug: "dr-amirhossein-pourdavood",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/ac84246810671c2744de34cb4e938aa2.jpg?size=150",
     isVerified: true,
     averageRating: 5,
@@ -99,6 +102,7 @@ export const doctorsData: DoctorModel[] = [
   {
     id: "160d",
     name: "اعظم قهساره اردستانی",
+    slug: "dr-azam-ghahsareh-ardestani",
     image: "https://cdn.paziresh24.com/getImage/p24/search-women/dc1c321cabe87e09772530d3480d2adc.jpg?size=150",
     isVerified: true,
     averageRating: 4.95,
@@ -131,6 +135,7 @@ export const doctorsData: DoctorModel[] = [
   {
     id: "4c81",
     name: "رضا پورعلی",
+    slug: "dr-reza-pourali",
     image: "https://cdn.paziresh24.com/getImage/p24/search-men/c0a4da00da796354da26c3b1ed016ab3.png?size=150",
     isVerified: true,
     averageRating: 4.8259,
