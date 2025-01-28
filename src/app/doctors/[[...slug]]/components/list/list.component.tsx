@@ -19,7 +19,7 @@ const ListComponent = ({
   return (
     <ul className={styles.container}>
       {doctors.map((item: DoctorModel) => (
-        <Link key={item.id} href={{ pathname: `/doctor/${item.id}` }}>
+        <Link key={item.slug} href={{ pathname: `/doctor/${item.slug}/${item.slug}` }}>
           <ItemComponent item={item} />
         </Link>
       ))}
