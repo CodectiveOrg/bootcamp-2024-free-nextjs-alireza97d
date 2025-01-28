@@ -1,11 +1,11 @@
 :root {
-  --fz-100: ;
-  --fz-200: ;
-  --fz-300: clamp(0.75rem, 0.6429rem + 0.4762vw, 1rem);
-  --fz-400: clamp(1rem, 1rem + 0vw, 1rem);
-  --fz-500: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem);
-  --fz-600: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem);
-  --fz-700: clamp(1.75rem, 1.4286rem + 1.4286vw, 2.5rem);
-  --fz-800: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem);
-  --fz-900: clamp(3rem, 1.7143rem + 5.7143vw, 6rem);
+  --fz-100: clamp(0.625rem, 0.5714rem + 0.2381vw, 0.75rem); /* 10px to 12px */
+  --fz-200: clamp(0.6875rem, 0.6071rem + 0.3571vw, 0.875rem); /* 11px to 14px */
+  --fz-300: clamp(0.75rem, 0.6429rem + 0.4762vw, 1rem); /* 12px to 16px */
+  --fz-400: clamp(1rem, 1rem + 0vw, 1rem); /* 16px */
+  --fz-500: clamp(1.25rem, 1.1429rem + 0.4762vw, 1.5rem); /* 20px to 24px */
+  --fz-600: clamp(1.5rem, 1.2857rem + 0.9524vw, 2rem); /* 24px to 32px */
+  --fz-700: clamp(1.75rem, 1.4286rem + 1.4286vw, 2.5rem); /* 28px to 40px */
+  --fz-800: clamp(2.5rem, 1.8571rem + 2.8571vw, 4rem); /* 40px to 64px */
+  --fz-900: clamp(3rem, 1.7143rem + 5.7143vw, 6rem); /* 48px to 96px */
 }

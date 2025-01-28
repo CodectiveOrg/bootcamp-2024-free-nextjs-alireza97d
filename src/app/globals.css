@@ -19,6 +19,10 @@
   --color-primary-darker: hsl(120deg 50% 44%);
   --color-primary-opposite: var(--color-gray-10);
 
+  --color-danger: hsl(0, 47.5%, 50%);
+  --color-danger-darker: hsl(360, 61.5%, 42.5%);
+  --color-warning: hsl(57, 100%, 50%);
+
   --border-radius: 0.875rem;
 
   --full-width: 75rem;
@@ -89,5 +93,9 @@ body {
     background-color: var(--color-gray-16);
     padding-block: 1rem;
     text-align: center;
+  }
+
+  main {
+    padding-block: 4rem;
   }
 }

@@ -1,0 +1,12 @@
+.clear {
+  width: 100%;
+  border-radius: var(--border-radius);
+
+  background-color: var(--color-danger);
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-danger-darker);
+  }
+}
