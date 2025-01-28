@@ -34,9 +34,11 @@ const ContactComponent = (): ReactNode => {
                             </li>
 
                             <li>
-                                <button>
-                                    <a href="tel:02155635553">021-55635553</a>
-                                </button>
+                                <a href="tel:02155635553">
+                                    <button>
+                                        021-55635553
+                                    </button>
+                                </a>
                             </li>
 
                             <li>
