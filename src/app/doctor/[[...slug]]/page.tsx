@@ -2,10 +2,13 @@ import { ReactElement } from "react";
 
 import { notFound } from "next/navigation";
 
+import InfoCardComponent from "./components/info/info-card.component";
+
 import { DoctorModel } from "@/types/doctor.type";
 
 import { doctorsData } from "@/models/doctors";
 
+import styles from "./page.module.css";
 
 type Props = {
     params: {
@@ -23,13 +26,41 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
     } else return notFound();
 
 
-    const doctorDetails = doctorsData.filter((doctor: DoctorModel) => (slug === doctor.slug))
+    const doctorDetails = doctorsData.filter((doctor: DoctorModel) => (slug === doctor.slug))[0]
 
-    if (doctorDetails.length === 0) return notFound()
-  
+    if (!doctorDetails) return notFound()
+
 
     return (
-        <div className=''>{slug}</div>
+        <div className={styles.page}>
+            <div className={styles.detaile}>
+                <div className="">
+                    <InfoCardComponent doctorDetails={doctorDetails} />
+                </div>
+
+                <div className="">
+                    about
+                </div>
+
+                <div className="">
+                    review
+                </div>
+            </div>
+
+            <div className={styles.reserve}>
+                <div className="">
+                    visit section
+                </div>
+
+                <div className="">
+                    nobat section
+                </div>
+
+                <div className="">
+                    address
+                </div>
+            </div>
+        </div>
     )
 }
 

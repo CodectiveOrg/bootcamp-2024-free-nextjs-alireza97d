@@ -1,0 +1,9 @@
+.info {
+  padding: 1rem;
+  height: auto;
+
+  background-color: var(--color-surface-700);
+  box-shadow: var(--shadow-400);
+
+  border-radius: var(--border-radius);
+}
