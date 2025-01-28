@@ -3,6 +3,11 @@ import { ReactElement } from "react";
 import { notFound } from "next/navigation";
 
 import InfoCardComponent from "./components/info/info-card.component";
+import AboutComponent from "./components/about/about.component";
+import ReserveComponent from "./components/reserve/reserve.component";
+import LocationComponent from "./components/location/location.component";
+import ReviewsComponent from "./components/reviews/reviews.component";
+import CounsulationComponent from "./components/counsulation/counsulation.component";
 
 import { DoctorModel } from "@/types/doctor.type";
 
@@ -39,25 +44,25 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
                 </div>
 
                 <div className="">
-                    about
+                    <AboutComponent />
                 </div>
 
                 <div className="">
-                    review
+                    <ReviewsComponent />
                 </div>
             </div>
 
             <div className={styles.reserve}>
-                <div className="">
-                    visit section
+                <div>
+                    <CounsulationComponent />
+                </div>
+
+                <div>
+                    <ReserveComponent />
                 </div>
 
                 <div className="">
-                    nobat section
-                </div>
-
-                <div className="">
-                    address
+                    <LocationComponent />
                 </div>
             </div>
         </div>

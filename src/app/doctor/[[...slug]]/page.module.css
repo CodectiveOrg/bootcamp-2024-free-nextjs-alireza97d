@@ -9,6 +9,9 @@
 
   .detaile {
     grid-area: detaile;
+
+    display: grid;
+    gap: 1rem;
   }
 
   .reserve {
