@@ -1,0 +1,45 @@
+.progress_container {
+  width: 100%;
+
+  .progress_lable {
+    display: inline-block;
+    margin-top: 0.8rem;
+  }
+
+  .progress_items {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    margin-top: 0.2rem;
+
+    > div {
+      position: relative;
+
+      width: 100%;
+
+      height: 0.5rem;
+
+      background-color: var(--color-gray-90);
+
+      border-radius: 0.5rem;
+
+      overflow: hidden;
+
+      .progress_fill {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 100%;
+
+        background-color: var(--color-success-darker);
+
+        transition: all;
+        transition-duration: 500;
+
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

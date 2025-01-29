@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  gap: 1rem;
+
+  .title {
+    h2 {
+      font-size: var(--fz-300);
+    }
+  }
+
+  .rate {
+    display: block;
+    text-align: center;
+    margin-block: 1rem;
+
+    font-size: var(--fz-200);
+    
+    .ave_rate {
+      background-color: var(--color-success-darker);
+
+      color: var(--color-primary-fade);
+
+      padding-inline: 0.5rem;
+      padding-block: 0.1rem;
+
+      border-radius: 0.5rem;
+    }
+  }
+}
