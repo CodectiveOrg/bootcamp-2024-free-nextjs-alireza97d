@@ -11,7 +11,7 @@
       justify-content: start;
       align-items: center;
       gap: 0.5rem;
-      
+
       font-size: var(--fz-300);
 
       li button {
@@ -21,7 +21,6 @@
         gap: 0.3rem;
 
         background-color: inherit;
-
 
         border: none;
 
@@ -95,9 +94,10 @@
 
         color: var(--color-primary-fade);
 
-        padding: 0.5rem;
+        padding-inline: 0.5rem;
+        padding-block: 0.1rem;
 
-        border-radius: var(--border-radius);
+        border-radius: 0.5rem;
       }
     }
   }
