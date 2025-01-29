@@ -13,7 +13,7 @@ const CounsulationComponent = (): ReactElement => {
             <div className={styles.container}>
                 <div className={styles.price}>
                     <span>همین الان آنلاین ویزیت شوید</span>
-                    <span>{price.toLocaleString()} تومان</span>
+                    <span>{price.toLocaleString("fa-IR")} تومان</span>
                 </div>
 
                 <div className={styles.note}>
