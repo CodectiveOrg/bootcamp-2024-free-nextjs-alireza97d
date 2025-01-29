@@ -12,10 +12,12 @@
       font-size: var(--fz-300);
     }
 
-    span {
+    .report {
       font-size: var(--fz-100);
 
       color: var(--color-primary-darker);
+
+      cursor: pointer;
     }
   }
 
