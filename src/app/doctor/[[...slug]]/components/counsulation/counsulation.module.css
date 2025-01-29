@@ -18,6 +18,18 @@
 
     padding-bottom: 0.7rem;
     padding: 1rem;
+
+    div {
+      display: flex;
+      justify-content: space-start;
+      align-items: center;
+      gap: 0.4rem;
+
+      svg{
+        width: 1.13rem;
+        height: 1.13rem;
+      }
+    }
   }
 
   .note {
@@ -31,7 +43,7 @@
       font-size: var(--fz-200);
       line-height: 1.5rem;
 
-      li span{
+      li span {
         font-weight: 600;
         font-size: var(--fz-300);
       }

@@ -3,6 +3,11 @@ import { ReactNode } from "react";
 
 import CardComponent from "@/components/card/card.component";
 
+import MingcutePencilLine from "@/icons/MingcutePencilLine";
+import MingcuteCalendar2Line from "@/icons/MingcuteCalendar2Line";
+import MingcutePhoneLine from "@/icons/MingcutePhoneLine";
+import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
+
 import styles from "./contact.module.css";
 
 const ContactComponent = (): ReactNode => {
@@ -10,9 +15,13 @@ const ContactComponent = (): ReactNode => {
         <div className={styles.container}>
             <div className={styles.title}>
                 <h2>آدرس و تلفن تماس</h2>
-                <span className={styles.report}>
-                    گزارش تلفن و آدرس صحیح
-                </span>
+
+                <div className={styles.report}>
+                    <MingcutePencilLine />
+                    <span>
+                        گزارش تلفن و آدرس صحیح
+                    </span>
+                </div>
             </div>
 
             <CardComponent>
@@ -27,6 +36,7 @@ const ContactComponent = (): ReactNode => {
                         <ul>
                             <li>
                                 <button>
+                                    <MingcuteCalendar2Line />
                                     <span>
                                         برنامه کاری پزشک
                                     </span>
@@ -36,13 +46,15 @@ const ContactComponent = (): ReactNode => {
                             <li>
                                 <a href="tel:02155635553">
                                     <button>
-                                        021-55635553
+                                        <MingcutePhoneLine />
+                                        <span>021-55635553</span>
                                     </button>
                                 </a>
                             </li>
 
                             <li>
                                 <button>
+                                    <MingcuteLocationLine />
                                     <span>
                                         مشاهده در نقشه و مسیریابی
                                     </span>

@@ -4,24 +4,44 @@
     justify-content: space-between;
     align-items: center;
 
+    margin-bottom: 1rem;
+
     ul {
       display: flex;
       justify-content: start;
       align-items: center;
       gap: 0.5rem;
+      
+      font-size: var(--fz-300);
 
       li button {
-        background-color: var(--color-surface-300);
-        font-size: var(--fz-100);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 0.3rem;
+
+        background-color: inherit;
+
 
         border: none;
-        border-radius: var(--border-radius);
 
         padding: 0.5rem;
+
+        cursor: pointer;
       }
     }
 
-    margin-bottom: 1rem;
+    .review {
+      display: flex;
+      justify-content: space-end;
+      align-items: center;
+      gap: 0.2rem;
+
+      svg {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
   }
 
   .info {

@@ -2,8 +2,10 @@ import { ReactElement } from "react";
 
 import CardComponent from "@/components/card/card.component";
 
-import styles from "./counsulation.module.css"
 import { MingcuteArrowLeftLine } from "@/icons/MingcuteArrowLeftLine";
+import OnlineTowCiecleFill from "@/icons/OnlineTowCiecleFill";
+
+import styles from "./counsulation.module.css"
 
 const price = 190000;
 
@@ -12,7 +14,10 @@ const CounsulationComponent = (): ReactElement => {
         <CardComponent customStyle={styles.card}>
             <div className={styles.container}>
                 <div className={styles.price}>
-                    <span>همین الان آنلاین ویزیت شوید</span>
+                    <div className="">
+                        <OnlineTowCiecleFill />
+                        <span>همین الان آنلاین ویزیت شوید</span>
+                    </div>
                     <span>{price.toLocaleString("fa-IR")} تومان</span>
                 </div>
 

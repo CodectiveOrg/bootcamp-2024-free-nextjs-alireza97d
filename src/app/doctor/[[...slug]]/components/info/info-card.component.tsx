@@ -3,10 +3,16 @@ import { ReactElement } from "react";
 import DoctorImageComponent from "@/components/common/doctor-image/doctor-image.component";
 import CardComponent from "@/components/card/card.component";
 
+import MingcuteEye2Line from "@/icons/MingcuteEye2Line";
+import MingcuteBookmarkLine from "@/icons/MingcuteBookmarkLine";
+import MingcuteShare2Line from "@/icons/MingcuteShare2Line";
+import MingcutePencilLine from "@/icons/MingcutePencilLine";
+
 import { DoctorModel } from "@/types/doctor.type";
 
 import styles from "./info-card.module.css";
 
+const view = 10;
 
 type Props = { doctorDetails: DoctorModel };
 
@@ -18,17 +24,29 @@ const InfoCardComponent: React.FC<Props> = ({ doctorDetails }): ReactElement => 
                 <div className={styles.action}>
                     <ul>
                         <li>
-                            <button>ذخیره</button>
+                            <button>
+                                <MingcuteBookmarkLine />
+                                <span>ذخیره</span>
+                            </button>
                         </li>
                         <li>
-                            <button>اشتراک گذاری</button>
+                            <button>
+                                <MingcuteShare2Line />
+                                <span>اشتراک گذاری</span>
+                            </button>
                         </li>
                         <li>
-                            <button>گزارش</button>
+                            <button>
+                                <MingcutePencilLine />
+                                <span>گزارش</span>
+                            </button>
                         </li>
                     </ul>
 
-                    <span>10K</span>
+                    <span className={styles.review}>
+                        <span>{view.toLocaleString('fa-IR')}K</span>
+                        <MingcuteEye2Line />
+                    </span>
                 </div>
 
                 <div className={styles.info}>
