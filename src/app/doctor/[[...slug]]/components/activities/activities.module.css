@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  gap: 1rem;
+
+  .title {
+    h2 {
+      font-size: var(--fz-300);
+    }
+  }
+
+  .activity {
+    ul li {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 0.5rem;
+
+      background-color: var(--color-surface-400);
+
+      font-size: var(--fz-200);
+
+      border-radius: var(--border-radius);
+
+      padding-inline: 1rem;
+      padding-block: 0.8rem;
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+      .consulation_count{
+        font-weight: 600;
+      }
+    }
+
+    ul li:not(:first-child) {
+      margin-top: 0.8rem;
+    }
+  }
+}

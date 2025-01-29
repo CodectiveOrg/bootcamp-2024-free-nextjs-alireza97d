@@ -8,6 +8,7 @@ import ReserveComponent from "./components/reserve/reserve.component";
 import ContactComponent from "./components/contact/contact.component";
 import ReviewsComponent from "./components/reviews/reviews.component";
 import CounsulationComponent from "./components/counsulation/counsulation.component";
+import ActivitiesComponent from "./components/activities/activities.component";
 
 import { DoctorModel } from "@/types/doctor.type";
 import { doctorsData } from "@/models/doctors";
@@ -45,6 +46,10 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
 
                 <div className="">
                     <AboutComponent />
+                </div>
+
+                <div className="">
+                    <ActivitiesComponent />
                 </div>
 
                 <div className="">
