@@ -14,7 +14,7 @@
     margin-block: 1rem;
 
     font-size: var(--fz-200);
-    
+
     .ave_rate {
       background-color: var(--color-success-darker);
 
@@ -25,5 +25,17 @@
 
       border-radius: 0.5rem;
     }
+  }
+
+  .card > *:not(:first-child) {
+    margin-top: 2rem;
+
+    padding-top: 2rem;
+
+    border-top: 1px solid var(--color-gray-90);
+  }
+
+  .card{
+    padding-block: 1.5rem;
   }
 }

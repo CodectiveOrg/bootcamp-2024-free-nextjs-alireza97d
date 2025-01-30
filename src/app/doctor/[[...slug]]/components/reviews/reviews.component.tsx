@@ -2,11 +2,13 @@ import { ReactNode } from "react";
 
 import CardComponent from "@/components/card/card.component";
 import RatingProgressComponent from "./rating-progress.component";
-import ReviewItemCompoent from "./review-item.compoent";
+import ReviewItemComponent from "./review-item.component";
 
 import styles from "./reviews.module.css";
 
 const ReviewsComponent = (): ReactNode => {
+    const commnets = Array.from({ length: 3 }, () => Math.floor(Math.random() * 6));
+
     return (
         <div className={styles.container}>
             <div className={styles.title}>
@@ -29,8 +31,10 @@ const ReviewsComponent = (): ReactNode => {
                 </div>
             </CardComponent>
 
-            <CardComponent>
-                <ReviewItemCompoent />
+            <CardComponent customStyle={styles.card}>
+                {commnets.map((_, index) => (
+                    <ReviewItemComponent key={index} />
+                ))}
             </CardComponent>
         </div>
     )

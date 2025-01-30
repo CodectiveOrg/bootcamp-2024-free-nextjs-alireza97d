@@ -6,7 +6,7 @@ import MingcuteMore2Line from "@/icons/MingcuteMore2Line";
 
 import styles from "./review-item.module.css"
 
-const ReviewItemCompoent = (): ReactElement => {
+const ReviewItemComponent = (): ReactElement => {
     return (
         <div className={styles.container}>
 
@@ -68,4 +68,4 @@ const ReviewItemCompoent = (): ReactElement => {
     )
 }
 
-export default ReviewItemCompoent;
+export default ReviewItemComponent;
