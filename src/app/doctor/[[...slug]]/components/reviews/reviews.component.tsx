@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import CardComponent from "@/components/card/card.component";
 import RatingProgressComponent from "./rating-progress.component";
 import ReviewItemComponent from "./review-item.component";
+import LoadMoreComponent from "@/components/common/buttons/load-more.component";
 
 import styles from "./reviews.module.css";
 
@@ -35,6 +36,8 @@ const ReviewsComponent = (): ReactNode => {
                 {commnets.map((_, index) => (
                     <ReviewItemComponent key={index} />
                 ))}
+
+                <LoadMoreComponent />
             </CardComponent>
         </div>
     )

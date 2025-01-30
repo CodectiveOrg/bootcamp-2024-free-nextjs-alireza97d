@@ -27,7 +27,7 @@
     }
   }
 
-  .card > *:not(:first-child) {
+  .card > *:not(:first-child):not(:last-child) {
     margin-top: 2rem;
 
     padding-top: 2rem;
@@ -35,7 +35,7 @@
     border-top: 1px solid var(--color-gray-90);
   }
 
-  .card{
+  .card {
     padding-block: 1.5rem;
   }
 }
