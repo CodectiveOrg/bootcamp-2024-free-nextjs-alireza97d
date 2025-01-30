@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 
 import CardComponent from "@/components/card/card.component";
 import RatingProgressComponent from "./rating-progress.component";
+import ReviewItemCompoent from "./review-item.compoent";
 
 import styles from "./reviews.module.css";
 
@@ -15,6 +16,7 @@ const ReviewsComponent = (): ReactNode => {
                     <span>معصومه دلجو</span>
                 </h2>
             </div>
+
             <CardComponent>
                 <div className={styles.rate}>
                     <span className={styles.ave_rate}>{2} از 5</span>
@@ -22,9 +24,13 @@ const ReviewsComponent = (): ReactNode => {
                     ({264} نظر)
                 </div>
 
-                <div className={styles.review}>
+                <div>
                     <RatingProgressComponent />
                 </div>
+            </CardComponent>
+
+            <CardComponent>
+                <ReviewItemCompoent />
             </CardComponent>
         </div>
     )

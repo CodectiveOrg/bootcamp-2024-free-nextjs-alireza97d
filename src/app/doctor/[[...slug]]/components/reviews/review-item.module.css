@@ -1,0 +1,138 @@
+.container {
+  > *:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .user_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    .owner .image,
+    .rate_container .rate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 2.2rem;
+      height: 2.2rem;
+
+      font-size: var(--fz-300);
+
+      color: var(--color-gray-99);
+    }
+
+    .rate_container {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 0.5rem;
+
+      .more_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+
+        width: 2rem;
+        height: 2rem;
+
+        svg {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+      }
+    }
+
+    .owner {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 0.5rem;
+
+      .image {
+        background-color: var(--color-danger-darker);
+
+        border-radius: 50%;
+      }
+
+      .name_container {
+        .name {
+          font-size: var(--fz-200);
+
+          span:first-of-type {
+            font-weight: 600;
+          }
+
+          span:last-of-type {
+            color: var(--color-text-700);
+
+            margin-inline-start: 0.5rem;
+
+            font-size: var(--fz-100);
+
+            background-color: var(--color-surface-400);
+
+            padding-block: 0.1rem;
+            padding-inline: 0.3rem;
+
+            border-radius: var(--border-radius);
+          }
+        }
+
+        .date{
+          color: var(--color-text-700);
+          
+          font-size: var(--fz-100);
+        }
+      }
+    }
+
+    .rate {
+      font-weight: 600;
+
+      background-color: var(--color-primary-darker);
+
+      border-top-left-radius: 0.35rem;
+      border-top-right-radius: 0.35rem;
+      border-bottom-left-radius: 0.35rem;
+    }
+  }
+
+  .text {
+    font-size: var(--fz-200);
+    line-height: 1.7rem;
+  }
+
+  .action_btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+
+    > :not(:last-child) {
+      margin-inline-end: 1rem;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      background-color: inherit;
+
+      border: none;
+
+      font-size: var(--fz-200);
+
+      cursor: pointer;
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+}
