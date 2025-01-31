@@ -15,11 +15,13 @@ const options: SelectOptionType[] = [
 ];
 
 export default function SortComponent(): ReactElement {
-
   const { filters, dispatchFilters } = useContext(ReviewsFiltersContext);
 
   const handleChange = (option: SelectOptionType) => {
-    dispatchFilters({ type: "SET_FILTER", payload: option.value as "all" | "visited" | "noVisited" });
+    dispatchFilters({
+      type: "SET_FILTER",
+      payload: option.value as "all" | "visited" | "noVisited",
+    });
   };
 
   return (
@@ -27,7 +29,10 @@ export default function SortComponent(): ReactElement {
       floating
       title="مرتب‌سازی"
       options={options}
-      selectedOption={options.find(opt => opt.value === filters.selectedFilter) || options[0]}
+      selectedOption={
+        options.find((opt) => opt.value === filters.selectedFilter) ||
+        options[0]
+      }
       onSelectedOptionChange={handleChange}
     />
   );

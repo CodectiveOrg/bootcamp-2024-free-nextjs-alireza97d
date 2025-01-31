@@ -19,7 +19,10 @@ export default function VoteFilterComponent(): ReactElement {
   const { filters, dispatchFilters } = useContext(VoteFiltersContext);
 
   const handleChange = (option: SelectOptionType) => {
-    dispatchFilters({ type: "SET_VOTE_FILTER", payload: option.value as "all" | "best" | "middle" | "bad" });
+    dispatchFilters({
+      type: "SET_VOTE_FILTER",
+      payload: option.value as "all" | "best" | "middle" | "bad",
+    });
   };
 
   return (
@@ -27,7 +30,10 @@ export default function VoteFilterComponent(): ReactElement {
       floating
       title="بر اساس امتیاز"
       options={options}
-      selectedOption={options.find(opt => opt.value === filters.selectedFilter) || options[0]}
+      selectedOption={
+        options.find((opt) => opt.value === filters.selectedFilter) ||
+        options[0]
+      }
       onSelectedOptionChange={handleChange}
     />
   );

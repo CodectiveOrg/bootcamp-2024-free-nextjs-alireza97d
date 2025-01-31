@@ -10,7 +10,6 @@ import { DoctorModel } from "@/types/doctor.type";
 
 import styles from "./item.module.css";
 
-
 type Props = {
   item: DoctorModel;
 };
@@ -19,7 +18,6 @@ const ItemComponent = ({ item }: Props): ReactElement => {
   return (
     <li className={styles.item}>
       <div className={styles.info}>
-  
         <DoctorImageComponent {...item} />
 
         <div className="">
@@ -52,7 +50,7 @@ const ItemComponent = ({ item }: Props): ReactElement => {
         <span>دریافت نوبت</span>
         <MingcuteArrowLeftLine />
       </button>
-    </li >
+    </li>
   );
 };
 

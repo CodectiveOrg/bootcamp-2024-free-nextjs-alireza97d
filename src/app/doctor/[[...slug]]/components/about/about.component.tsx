@@ -1,15 +1,12 @@
-
 import { ReactNode } from "react";
 
 import CardComponent from "@/components/card/card.component";
 
 import styles from "./about.module.css";
 
-
 type Props = {
   aboutText: string;
-}
-
+};
 
 const AboutComponent: React.FC<Props> = ({ aboutText }): ReactNode => {
   return (
@@ -19,12 +16,12 @@ const AboutComponent: React.FC<Props> = ({ aboutText }): ReactNode => {
       </div>
       <CardComponent>
         <div
-          dangerouslySetInnerHTML={{ __html: aboutText ?? '' }}
+          dangerouslySetInnerHTML={{ __html: aboutText ?? "" }}
           className={styles.about}
         />
       </CardComponent>
     </div>
-  )
-}
+  );
+};
 
 export default AboutComponent;

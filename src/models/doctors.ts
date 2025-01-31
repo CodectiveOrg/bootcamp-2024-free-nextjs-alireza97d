@@ -6,7 +6,8 @@ export const doctorsData: DoctorModel[] = [
     name: "پوراندخت جعفری",
     en_name: "dr-pourandokht-jafari",
     price: 190000,
-    image: "https://cdn.paziresh24.com/getImage/p24/search-women/8cd097208180a48ff5206f6122b9a5a5.jpg?size=150",
+    image:
+      "https://cdn.paziresh24.com/getImage/p24/search-women/8cd097208180a48ff5206f6122b9a5a5.jpg?size=150",
     isVerified: true,
     averageRating: 4.99,
     totalVotes: 294,
@@ -109,7 +110,8 @@ export const doctorsData: DoctorModel[] = [
     name: "مجتبی قدسی",
     en_name: "dr-mojtaba-ghodsi",
     price: 100000,
-    image: "https://cdn.paziresh24.com/getImage/p24/search-men/9b45c32fe70f1321b4b349bc1a5aff9c.jpeg?size=150",
+    image:
+      "https://cdn.paziresh24.com/getImage/p24/search-men/9b45c32fe70f1321b4b349bc1a5aff9c.jpeg?size=150",
     isVerified: true,
     averageRating: 4.92,
     totalVotes: 1487,
@@ -191,7 +193,8 @@ export const doctorsData: DoctorModel[] = [
     name: "امیرحسین پورداود",
     en_name: "dr-amirhossein-pourdavood",
     price: 150000,
-    image: "https://cdn.paziresh24.com/getImage/p24/search-men/ac84246810671c2744de34cb4e938aa2.jpg?size=150",
+    image:
+      "https://cdn.paziresh24.com/getImage/p24/search-men/ac84246810671c2744de34cb4e938aa2.jpg?size=150",
     isVerified: true,
     averageRating: 5,
     totalVotes: 190,
@@ -258,14 +261,15 @@ export const doctorsData: DoctorModel[] = [
         text: "نتایج درمانی بسیار خوب، اما هزینه کمی بالا بود.",
         vote: 4,
       },
-    ]
+    ],
   },
   {
     slug: "160d",
     name: "اعظم قهساره اردستانی",
     en_name: "dr-azam-ghahsareh-ardestani",
     price: 350000,
-    image: "https://cdn.paziresh24.com/getImage/p24/search-women/dc1c321cabe87e09772530d3480d2adc.jpg?size=150",
+    image:
+      "https://cdn.paziresh24.com/getImage/p24/search-women/dc1c321cabe87e09772530d3480d2adc.jpg?size=150",
     isVerified: true,
     averageRating: 4.95,
     totalVotes: 759,
@@ -333,7 +337,8 @@ export const doctorsData: DoctorModel[] = [
     name: "رضا پورعلی",
     en_name: "dr-reza-pourali",
     price: 123000,
-    image: "https://cdn.paziresh24.com/getImage/p24/search-men/c0a4da00da796354da26c3b1ed016ab3.png?size=150",
+    image:
+      "https://cdn.paziresh24.com/getImage/p24/search-men/c0a4da00da796354da26c3b1ed016ab3.png?size=150",
     isVerified: true,
     averageRating: 4.8259,
     totalVotes: 305,

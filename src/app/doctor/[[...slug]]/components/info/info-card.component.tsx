@@ -17,62 +17,64 @@ const maxVote = 5;
 
 type Props = { doctorDetails: DoctorModel };
 
-const InfoCardComponent: React.FC<Props> = ({ doctorDetails }): ReactElement => {
-    return (
-        <CardComponent>
-            <div className={styles.card}>
+const InfoCardComponent: React.FC<Props> = ({
+  doctorDetails,
+}): ReactElement => {
+  return (
+    <CardComponent>
+      <div className={styles.card}>
+        <div className={styles.action}>
+          <ul>
+            <li>
+              <button>
+                <MingcuteBookmarkLine />
+                <span>ذخیره</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <MingcuteShare2Line />
+                <span>اشتراک گذاری</span>
+              </button>
+            </li>
+            <li>
+              <button>
+                <MingcutePencilLine />
+                <span>گزارش</span>
+              </button>
+            </li>
+          </ul>
 
-                <div className={styles.action}>
-                    <ul>
-                        <li>
-                            <button>
-                                <MingcuteBookmarkLine />
-                                <span>ذخیره</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <MingcuteShare2Line />
-                                <span>اشتراک گذاری</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button>
-                                <MingcutePencilLine />
-                                <span>گزارش</span>
-                            </button>
-                        </li>
-                    </ul>
+          <span className={styles.review}>
+            <span>{view.toLocaleString("fa-IR")}K</span>
+            <MingcuteEye2Line />
+          </span>
+        </div>
 
-                    <span className={styles.review}>
-                        <span>{view.toLocaleString('fa-IR')}K</span>
-                        <MingcuteEye2Line />
-                    </span>
-                </div>
+        <div className={styles.info}>
+          <DoctorImageComponent {...doctorDetails} />
 
-                <div className={styles.info}>
-                    <DoctorImageComponent {...doctorDetails} />
+          <div className="">
+            <h1>{doctorDetails.name}</h1>
+            <span>شماره نظام پزشکی: 165017</span>
+          </div>
+        </div>
 
-                    <div className="">
-                        <h1>{doctorDetails.name}</h1>
-                        <span>شماره نظام پزشکی: 165017</span>
-                    </div>
-                </div>
+        <div className={styles.brief_container}>
+          <strong className={styles.brief}>{doctorDetails.brief}</strong>
 
-                <div className={styles.brief_container}>
-                    <strong className={styles.brief}>
-                        {doctorDetails.brief}
-                    </strong>
-
-                    <span className={styles.rate}>
-                        <span className={styles.ave_rate}>{doctorDetails?.averageRating?.toLocaleString('fa-IR')} از {maxVote?.toLocaleString('fa-IR')}</span>
-                        &nbsp;رضایت
-                        ({doctorDetails?.totalVotes?.toLocaleString('fa-IR')} نظر)
-                    </span>
-                </div>
-            </div>
-        </CardComponent>
-    )
-}
+          <span className={styles.rate}>
+            <span className={styles.ave_rate}>
+              {doctorDetails?.averageRating?.toLocaleString("fa-IR")} از{" "}
+              {maxVote?.toLocaleString("fa-IR")}
+            </span>
+            &nbsp;رضایت ({doctorDetails?.totalVotes?.toLocaleString("fa-IR")}{" "}
+            نظر)
+          </span>
+        </div>
+      </div>
+    </CardComponent>
+  );
+};
 
 export default InfoCardComponent;

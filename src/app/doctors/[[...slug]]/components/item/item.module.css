@@ -70,7 +70,7 @@
     margin-block-start: 1.5rem;
 
     address {
-      color:var(--color-gray-40);
+      color: var(--color-gray-40);
 
       font-style: normal;
       font-size: var(--fz-200);

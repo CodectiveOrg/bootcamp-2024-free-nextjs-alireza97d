@@ -15,12 +15,12 @@ export interface Appointment {
 }
 
 export type DoctorsReviews = {
-  patientName: string,
-  isVisited: boolean,
-  date: string,
-  text: string,
-  vote: number,
-}
+  patientName: string;
+  isVisited: boolean;
+  date: string;
+  text: string;
+  vote: number;
+};
 export interface DoctorModel {
   slug: string;
   name: string;

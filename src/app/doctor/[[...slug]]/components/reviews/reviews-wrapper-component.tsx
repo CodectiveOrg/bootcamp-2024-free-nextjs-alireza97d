@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { PropsWithChildren, ReactElement } from "react";
 
@@ -9,19 +9,22 @@ import VoteFiltersProvider from "@/app/doctor/provider/reviews/vote-filters.prov
 import { DoctorsReviews } from "@/types/doctor.type";
 
 type Props = PropsWithChildren & {
-    doctorsReviews: DoctorsReviews[];
-}
+  doctorsReviews: DoctorsReviews[];
+};
 
-const ReviewsWrapperComponent: React.FC<Props> = ({ children, doctorsReviews }): ReactElement => {
-    return (
-        <VoteFiltersProvider>
-            <ReviewsFiltersProvider>
-                <ReviewsProvider doctorsReviews={doctorsReviews}>
-                    {children}
-                </ReviewsProvider>
-            </ReviewsFiltersProvider>
-        </VoteFiltersProvider>
-    )
-}
+const ReviewsWrapperComponent: React.FC<Props> = ({
+  children,
+  doctorsReviews,
+}): ReactElement => {
+  return (
+    <VoteFiltersProvider>
+      <ReviewsFiltersProvider>
+        <ReviewsProvider doctorsReviews={doctorsReviews}>
+          {children}
+        </ReviewsProvider>
+      </ReviewsFiltersProvider>
+    </VoteFiltersProvider>
+  );
+};
 
 export default ReviewsWrapperComponent;
