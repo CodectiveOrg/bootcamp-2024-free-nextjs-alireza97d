@@ -38,4 +38,10 @@
   .card {
     padding-block: 1.5rem;
   }
+
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

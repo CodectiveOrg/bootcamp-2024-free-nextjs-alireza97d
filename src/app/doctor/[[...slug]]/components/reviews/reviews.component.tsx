@@ -1,9 +1,15 @@
-import { ReactNode } from "react";
+'use client'
+
+import { ReactNode, useContext } from "react";
+
+import { ReviewsContext } from "@/app/doctor/provider/reviews/reviews.provider";
 
 import CardComponent from "@/components/card/card.component";
 import RatingProgressComponent from "./rating-progress.component";
 import ReviewItemComponent from "./review-item.component";
 import LoadMoreComponent from "@/components/common/buttons/load-more.component";
+import SortComponent from "../sort/sort.component";
+import VoteFilterComponent from "../vote-filter/vote-filter.component";
 
 import { DoctorsReviews } from "@/types/doctor.type";
 
@@ -18,7 +24,7 @@ type Props = {
 }
 
 const ReviewsComponent: React.FC<Props> = ({ averageRating, totalVotes, doctorsReviews }): ReactNode => {
-    // const commnets = Array.from({ length: 3 }, () => Math.floor(Math.random() * 6));
+    const { filteredReviews } = useContext(ReviewsContext);
 
     return (
         <div className={styles.container}>
@@ -44,7 +50,11 @@ const ReviewsComponent: React.FC<Props> = ({ averageRating, totalVotes, doctorsR
 
             {(doctorsReviews?.length !== 0) &&
                 <CardComponent customStyle={styles.card}>
-                    {doctorsReviews?.map((review: DoctorsReviews, index) => (
+                    <div className={styles.toolbar}>
+                        <SortComponent />
+                        <VoteFilterComponent />
+                    </div>
+                    {filteredReviews?.map((review: DoctorsReviews, index: number) => (
                         <ReviewItemComponent key={index} review={review} />
                     ))}
 

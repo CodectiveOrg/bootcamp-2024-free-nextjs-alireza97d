@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 import { notFound } from "next/navigation";
 
+import ReviewsWrapperComponent from "./components/reviews/reviews-wrapper-component";
 import InfoCardComponent from "./components/info/info-card.component";
 import AboutComponent from "./components/about/about.component";
 import ReserveComponent from "./components/reserve/reserve.component";
@@ -56,11 +57,13 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
                 </div>
 
                 <div className="">
-                    <ReviewsComponent
-                        totalVotes={doctorDetails?.totalVotes}
-                        averageRating={doctorDetails?.averageRating}
-                        doctorsReviews={doctorDetails?.doctorsReviews}
-                    />
+                    <ReviewsWrapperComponent doctorsReviews={doctorDetails?.doctorsReviews}>
+                        <ReviewsComponent
+                            totalVotes={doctorDetails?.totalVotes}
+                            averageRating={doctorDetails?.averageRating}
+                            doctorsReviews={doctorDetails?.doctorsReviews}
+                        />
+                    </ReviewsWrapperComponent>
                 </div>
             </div>
 
