@@ -78,7 +78,10 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
         </div>
 
         <div className="">
-          <ContactComponent address={doctorDetails?.address} />
+          <ContactComponent
+            address={doctorDetails?.address}
+            doctorName={doctorDetails?.name}
+          />
         </div>
       </div>
     </div>

@@ -11,9 +11,22 @@ import styles from "./contact.module.css";
 
 type Props = {
   address: string;
+  doctorName: string;
 };
 
-const ContactComponent: React.FC<Props> = ({ address }): ReactNode => {
+const extractCityAndAddress = (fullAddress: string) => {
+  const parts = fullAddress.split(/[,.،]/);
+  const city = parts[0]?.trim() || "";
+  const remainingAddress = parts.slice(1).join(", ").trim();
+  return { city, remainingAddress };
+};
+
+const ContactComponent: React.FC<Props> = ({
+  address,
+  doctorName,
+}): ReactNode => {
+  const { city, remainingAddress } = extractCityAndAddress(address);
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -27,10 +40,10 @@ const ContactComponent: React.FC<Props> = ({ address }): ReactNode => {
 
       <CardComponent>
         <div className={styles.contact}>
-          <strong>مطب دکتر معصومه دلجو</strong>
+          <strong>مطب دکتر {doctorName}</strong>
           <address>
-            <span>تهران - </span>
-            <span>تهران، وحدت اسلامی، رازی</span>
+            <span>{city} - </span>
+            <span>{remainingAddress}</span>
           </address>
 
           <div className={styles.action_btn}>
