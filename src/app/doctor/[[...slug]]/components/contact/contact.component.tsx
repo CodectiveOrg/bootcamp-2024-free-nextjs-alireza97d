@@ -10,7 +10,11 @@ import MingcuteLocationLine from "@/icons/MingcuteLocationLine";
 
 import styles from "./contact.module.css";
 
-const ContactComponent = (): ReactNode => {
+type Props = {
+    address: string;
+}
+
+const ContactComponent: React.FC<Props> = ({ address }): ReactNode => {
     return (
         <div className={styles.container}>
             <div className={styles.title}>

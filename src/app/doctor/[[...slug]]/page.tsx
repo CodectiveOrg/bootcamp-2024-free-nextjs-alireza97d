@@ -45,21 +45,28 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
                 </div>
 
                 <div className="">
-                    <AboutComponent />
+                    <AboutComponent aboutText={doctorDetails?.about} />
                 </div>
 
                 <div className="">
-                    <ActivitiesComponent />
+                    <ActivitiesComponent
+                        doctorName={doctorDetails?.name}
+                        activeCounsulate={doctorDetails?.activeCounsulate}
+                    />
                 </div>
 
                 <div className="">
-                    <ReviewsComponent />
+                    <ReviewsComponent
+                        totalVotes={doctorDetails?.totalVotes}
+                        averageRating={doctorDetails?.averageRating}
+                        doctorsReviews={doctorDetails?.doctorsReviews}
+                    />
                 </div>
             </div>
 
             <div className={styles.reserve}>
                 <div>
-                    <CounsulationComponent />
+                    <CounsulationComponent price={doctorDetails?.price} />
                 </div>
 
                 <div>
@@ -67,7 +74,7 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
                 </div>
 
                 <div className="">
-                    <ContactComponent />
+                    <ContactComponent address={doctorDetails?.address} />
                 </div>
             </div>
         </div>

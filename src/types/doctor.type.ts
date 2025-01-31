@@ -14,10 +14,18 @@ export interface Appointment {
   time: string;
 }
 
+export type DoctorsReviews = {
+  patientName: string,
+  isVisited: boolean,
+  date: string,
+  text: string,
+  vote: number,
+}
 export interface DoctorModel {
   slug: string;
   name: string;
   en_name: string;
+  price: number;
   image: string;
   isVerified: boolean;
   averageRating: number;
@@ -30,4 +38,7 @@ export interface DoctorModel {
   specialty: Specialty;
   gender: Gender;
   city: City;
+  about: string;
+  activeCounsulate: number;
+  doctorsReviews: DoctorsReviews[];
 }

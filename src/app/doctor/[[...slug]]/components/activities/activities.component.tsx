@@ -7,9 +7,12 @@ import MingcuteAwardLine from "@/icons/MingcuteAwardLine";
 
 import styles from "./activities.module.css"
 
-const comment = 231;
+type Props = {
+    doctorName: string;
+    activeCounsulate:number;
+}
 
-const ActivitiesComponent = (): ReactElement => {
+const ActivitiesComponent: React.FC<Props> = ({ doctorName,activeCounsulate }): ReactElement => {
     return (
         <div className={styles.container}>
             <div className={styles.title}>
@@ -21,7 +24,7 @@ const ActivitiesComponent = (): ReactElement => {
                         <li>
                             <MingcuteCommentLine />
                             <span>
-                                <span className={styles.consulation_count}>{comment.toLocaleString('fa-IR')}</span>
+                                <span className={styles.consulation_count}>{activeCounsulate.toLocaleString('fa-IR')}</span>
                                 &nbsp;
                                 <span>مشاوره فعال</span>
                             </span>
@@ -30,7 +33,7 @@ const ActivitiesComponent = (): ReactElement => {
                         <li>
                             <MingcuteAwardLine />
                             <span>
-                                پذیرش24 بیش از 2 سال و 11 ماه افتخار میزبانی از صفحه اختصاصی دکتر معصومه دلجو را داشته است.
+                                پذیرش24 بیش از 2 سال و 11 ماه افتخار میزبانی از صفحه اختصاصی دکتر {doctorName} را داشته است.
                             </span>
                         </li>
                     </ul>

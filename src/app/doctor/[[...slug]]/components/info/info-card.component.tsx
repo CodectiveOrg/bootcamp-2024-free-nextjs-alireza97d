@@ -13,6 +13,7 @@ import { DoctorModel } from "@/types/doctor.type";
 import styles from "./info-card.module.css";
 
 const view = 10;
+const maxVote = 5;
 
 type Props = { doctorDetails: DoctorModel };
 
@@ -64,9 +65,9 @@ const InfoCardComponent: React.FC<Props> = ({ doctorDetails }): ReactElement => 
                     </strong>
 
                     <span className={styles.rate}>
-                        <span className={styles.ave_rate}>{doctorDetails.averageRating} از 5</span>
+                        <span className={styles.ave_rate}>{doctorDetails?.averageRating?.toLocaleString('fa-IR')} از {maxVote?.toLocaleString('fa-IR')}</span>
                         &nbsp;رضایت
-                        ({doctorDetails.totalVotes} نظر)
+                        ({doctorDetails?.totalVotes?.toLocaleString('fa-IR')} نظر)
                     </span>
                 </div>
             </div>

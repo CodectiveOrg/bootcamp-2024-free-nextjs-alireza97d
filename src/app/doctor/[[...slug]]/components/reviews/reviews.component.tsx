@@ -5,10 +5,20 @@ import RatingProgressComponent from "./rating-progress.component";
 import ReviewItemComponent from "./review-item.component";
 import LoadMoreComponent from "@/components/common/buttons/load-more.component";
 
+import { DoctorsReviews } from "@/types/doctor.type";
+
 import styles from "./reviews.module.css";
 
-const ReviewsComponent = (): ReactNode => {
-    const commnets = Array.from({ length: 3 }, () => Math.floor(Math.random() * 6));
+const maxVote = 5;
+
+type Props = {
+    averageRating: number;
+    totalVotes: number;
+    doctorsReviews: DoctorsReviews[];
+}
+
+const ReviewsComponent: React.FC<Props> = ({ averageRating, totalVotes, doctorsReviews }): ReactNode => {
+    // const commnets = Array.from({ length: 3 }, () => Math.floor(Math.random() * 6));
 
     return (
         <div className={styles.container}>
@@ -22,9 +32,9 @@ const ReviewsComponent = (): ReactNode => {
 
             <CardComponent>
                 <div className={styles.rate}>
-                    <span className={styles.ave_rate}>{2} از 5</span>
+                    <span className={styles.ave_rate}>{averageRating.toLocaleString('fa-IR')} از {maxVote?.toLocaleString('fa-IR')}</span>
                     &nbsp;رضایت
-                    ({264} نظر)
+                    ({totalVotes.toLocaleString('fa-IR')} نظر)
                 </div>
 
                 <div>
@@ -32,13 +42,15 @@ const ReviewsComponent = (): ReactNode => {
                 </div>
             </CardComponent>
 
-            <CardComponent customStyle={styles.card}>
-                {commnets.map((_, index) => (
-                    <ReviewItemComponent key={index} />
-                ))}
+            {(doctorsReviews?.length !== 0) &&
+                <CardComponent customStyle={styles.card}>
+                    {doctorsReviews?.map((review: DoctorsReviews, index) => (
+                        <ReviewItemComponent key={index} review={review} />
+                    ))}
 
-                <LoadMoreComponent />
-            </CardComponent>
+                    <LoadMoreComponent />
+                </CardComponent>
+            }
         </div>
     )
 }

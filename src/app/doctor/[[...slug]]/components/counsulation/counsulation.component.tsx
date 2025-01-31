@@ -6,10 +6,13 @@ import { MingcuteArrowLeftLine } from "@/icons/MingcuteArrowLeftLine";
 import OnlineTowCiecleFill from "@/icons/OnlineTowCiecleFill";
 
 import styles from "./counsulation.module.css"
+;
 
-const price = 190000;
+type Props = {
+    price: number
+}
 
-const CounsulationComponent = (): ReactElement => {
+const CounsulationComponent: React.FC<Props> = ({price}): ReactElement => {
     return (
         <CardComponent customStyle={styles.card}>
             <div className={styles.container}>

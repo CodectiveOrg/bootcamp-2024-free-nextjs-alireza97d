@@ -66,7 +66,9 @@
             font-weight: 600;
           }
 
-          span:last-of-type {
+          .visited_badge {
+            display: inline-block;
+
             color: var(--color-text-700);
 
             margin-inline-start: 0.5rem;
@@ -82,9 +84,9 @@
           }
         }
 
-        .date{
+        .date {
           color: var(--color-text-700);
-          
+
           font-size: var(--fz-100);
         }
       }
