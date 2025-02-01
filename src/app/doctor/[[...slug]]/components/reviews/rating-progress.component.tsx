@@ -1,26 +1,29 @@
 import { ReactElement } from "react";
 
+import { RatingProgress } from "@/types/doctor.type";
+
 import styles from "./rating-progress.module.css";
 
-const RatingProgressComponent = (): ReactElement => {
-  const ratings = Array.from({ length: 3 }, () =>
-    Math.floor(Math.random() * 6),
-  );
 
+type Props = {
+  ratingProgress:RatingProgress[];
+}
+
+const RatingProgressComponent: React.FC<Props> = ({ ratingProgress }): ReactElement => {
   return (
     <div className={styles.progress_container}>
-      {ratings.map((rating, index) => {
+      {ratingProgress.map((rating, index) => {
         return (
           <div key={index}>
-            <span className={styles.progress_lable}>برخورد مناسب پزشک</span>
+            <span className={styles.progress_lable}>{rating.lable}</span>
             <div className={styles.progress_items}>
               <div role="progressbar">
                 <div
-                  style={{ width: `${(rating / 5) * 100}%` }}
+                  style={{ width: `${(rating.rate / 5) * 100}%` }}
                   className={styles.progress_fill}
                 ></div>
               </div>
-              <span>{rating.toLocaleString("fa-IR")}</span>
+              <span>{rating.rate.toLocaleString("fa-IR")}</span>
             </div>
           </div>
         );

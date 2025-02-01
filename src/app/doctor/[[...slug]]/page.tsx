@@ -63,6 +63,7 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
               totalVotes={doctorDetails?.totalVotes}
               averageRating={doctorDetails?.averageRating}
               doctorsReviews={doctorDetails?.doctorsReviews}
+              ratingProgress={doctorDetails?.ratingProgress}
             />
           </ReviewsWrapperComponent>
         </div>

@@ -88,6 +88,11 @@ export const doctorsData: DoctorModel[] = [
       <p style="font-style: italic;">توجه: همیشه قبل از شروع هر نوع درمانی با پزشک خود مشورت کنید.</p>
     </div>
    `,
+    ratingProgress: [
+      { lable: "برخورد مناسب", rate: 5 },
+      { lable: "ویزیت به موقع", rate: 5 },
+      { lable: "هزینه ویزیت", rate: 4 },
+    ],
     doctorsReviews: [
       {
         patientName: "محمدرضا",
@@ -164,6 +169,11 @@ export const doctorsData: DoctorModel[] = [
       <p style="font-style: italic;">توجه: همیشه قبل از شروع هر نوع درمانی با پزشک خود مشورت کنید.</p>
     </div>
    `,
+    ratingProgress: [
+      { lable: "برخورد مناسب", rate: 5 },
+      { lable: "ویزیت به موقع", rate: 4 },
+      { lable: "هزینه ویزیت", rate: 2 },
+    ],
     doctorsReviews: [
       {
         patientName: "حسین",
@@ -246,6 +256,11 @@ export const doctorsData: DoctorModel[] = [
       <p style="font-style: italic;">توجه: همیشه قبل از شروع هر نوع درمانی با پزشک خود مشورت کنید.</p>
     </div>
    `,
+    ratingProgress: [
+      { lable: "برخورد مناسب", rate: 4 },
+      { lable: "ویزیت به موقع", rate: 3 },
+      { lable: "هزینه ویزیت", rate: 1 },
+    ],
     doctorsReviews: [
       {
         patientName: "فرزاد",
@@ -322,6 +337,11 @@ export const doctorsData: DoctorModel[] = [
       <p style="font-style: italic;">توجه: همیشه قبل از شروع هر نوع درمانی با پزشک خود مشورت کنید.</p>
     </div>
    `,
+    ratingProgress: [
+      { lable: "برخورد مناسب", rate: 5 },
+      { lable: "ویزیت به موقع", rate: 4 },
+      { lable: "هزینه ویزیت", rate: 2 },
+    ],
     doctorsReviews: [
       {
         patientName: "نیما",
@@ -395,6 +415,11 @@ export const doctorsData: DoctorModel[] = [
       <p style="font-style: italic;">توجه: همیشه قبل از شروع هر نوع درمانی با پزشک خود مشورت کنید.</p>
     </div>
    `,
+    ratingProgress: [
+      { lable: "برخورد مناسب", rate: 5 },
+      { lable: "ویزیت به موقع", rate: 4 },
+      { lable: "هزینه ویزیت", rate: 2 },
+    ],
     doctorsReviews: [
       {
         patientName: "سعید",

@@ -11,7 +11,7 @@ import LoadMoreComponent from "@/components/common/buttons/load-more.component";
 import SortComponent from "../sort/sort.component";
 import VoteFilterComponent from "../vote-filter/vote-filter.component";
 
-import { DoctorsReviews } from "@/types/doctor.type";
+import { DoctorsReviews, RatingProgress } from "@/types/doctor.type";
 
 import styles from "./reviews.module.css";
 
@@ -21,12 +21,14 @@ type Props = {
   averageRating: number;
   totalVotes: number;
   doctorsReviews: DoctorsReviews[];
+  ratingProgress:RatingProgress[];
 };
 
 const ReviewsComponent: React.FC<Props> = ({
   averageRating,
   totalVotes,
   doctorsReviews,
+  ratingProgress
 }): ReactNode => {
   const { filteredReviews } = useContext(ReviewsContext);
 
@@ -50,7 +52,7 @@ const ReviewsComponent: React.FC<Props> = ({
         </div>
 
         <div>
-          <RatingProgressComponent />
+          <RatingProgressComponent ratingProgress={ratingProgress}/>
         </div>
       </CardComponent>
 
