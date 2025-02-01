@@ -1,18 +1,14 @@
 import { ReactElement } from "react";
 
-import Image from "next/image";
+import DoctorImageComponent from "@/components/common/doctor-image/doctor-image.component";
 
 import { MingcuteStarFill } from "@/icons/MingcuteStarFill";
-
-import { DoctorModel } from "@/types/doctor.type";
-import { GenderEnums } from "@/enums/gender";
-
-import maleImg from "@/assets/fallback-images/portrait-3d-male-doctor.jpg";
-import femaleImg from "@/assets/fallback-images/portrait-3d-female-doctor.jpg";
-
-import styles from "./item.module.css";
 import { MingcuteLocationFill } from "@/icons/MingcuteLocationFill";
 import { MingcuteArrowLeftLine } from "@/icons/MingcuteArrowLeftLine";
+
+import { DoctorModel } from "@/types/doctor.type";
+
+import styles from "./item.module.css";
 
 type Props = {
   item: DoctorModel;
@@ -22,16 +18,8 @@ const ItemComponent = ({ item }: Props): ReactElement => {
   return (
     <li className={styles.item}>
       <div className={styles.info}>
-        <Image
-          src={
-            item?.image ||
-            (item.gender.en === GenderEnums.MALE ? maleImg : femaleImg)
-          }
-          width={80}
-          height={80}
-          alt={item.name}
-          className={styles.image}
-        />
+        <DoctorImageComponent {...item} />
+
         <div className="">
           <h2 className={styles.name}>{item.name}</h2>
           <p className={styles.brief}>{item.brief}</p>
