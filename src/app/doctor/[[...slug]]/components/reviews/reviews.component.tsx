@@ -21,14 +21,14 @@ type Props = {
   averageRating: number;
   totalVotes: number;
   doctorsReviews: DoctorsReviews[];
-  ratingProgress:RatingProgress[];
+  ratingProgress: RatingProgress[];
 };
 
 const ReviewsComponent: React.FC<Props> = ({
   averageRating,
   totalVotes,
   doctorsReviews,
-  ratingProgress
+  ratingProgress,
 }): ReactNode => {
   const { filteredReviews } = useContext(ReviewsContext);
 
@@ -52,7 +52,7 @@ const ReviewsComponent: React.FC<Props> = ({
         </div>
 
         <div>
-          <RatingProgressComponent ratingProgress={ratingProgress}/>
+          <RatingProgressComponent ratingProgress={ratingProgress} />
         </div>
       </CardComponent>
 

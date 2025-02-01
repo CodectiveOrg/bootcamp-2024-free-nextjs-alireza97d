@@ -4,12 +4,13 @@ import { RatingProgress } from "@/types/doctor.type";
 
 import styles from "./rating-progress.module.css";
 
-
 type Props = {
-  ratingProgress:RatingProgress[];
-}
+  ratingProgress: RatingProgress[];
+};
 
-const RatingProgressComponent: React.FC<Props> = ({ ratingProgress }): ReactElement => {
+const RatingProgressComponent: React.FC<Props> = ({
+  ratingProgress,
+}): ReactElement => {
   return (
     <div className={styles.progress_container}>
       {ratingProgress.map((rating, index) => {

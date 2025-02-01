@@ -22,7 +22,7 @@ export type DoctorsReviews = {
   vote: number;
 };
 
-export type RatingProgress = { lable: string, rate: number }
+export type RatingProgress = { lable: string; rate: number };
 export interface DoctorModel {
   slug: string;
   name: string;
@@ -42,6 +42,6 @@ export interface DoctorModel {
   city: City;
   about: string;
   activeCounsulate: number;
-  ratingProgress: RatingProgress[],
+  ratingProgress: RatingProgress[];
   doctorsReviews: DoctorsReviews[];
 }
