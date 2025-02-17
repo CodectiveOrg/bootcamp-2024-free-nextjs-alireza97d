@@ -68,8 +68,7 @@ const InfoCardComponent: React.FC<Props> = ({
               {doctorDetails?.averageRating?.toLocaleString()} از{" "}
               {maxVote?.toLocaleString()}
             </span>
-            &nbsp;رضایت ({doctorDetails?.totalVotes?.toLocaleString()}{" "}
-            نظر)
+            &nbsp;رضایت ({doctorDetails?.totalVotes?.toLocaleString()} نظر)
           </span>
         </div>
       </div>
