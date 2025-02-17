@@ -46,7 +46,7 @@ const InfoCardComponent: React.FC<Props> = ({
           </ul>
 
           <span className={styles.review}>
-            <span>{view.toLocaleString("fa-IR")}K</span>
+            <span>{view.toLocaleString()}K</span>
             <MingcuteEye2Line />
           </span>
         </div>
@@ -65,10 +65,10 @@ const InfoCardComponent: React.FC<Props> = ({
 
           <span className={styles.rate}>
             <span className={styles.ave_rate}>
-              {doctorDetails?.averageRating?.toLocaleString("fa-IR")} از{" "}
-              {maxVote?.toLocaleString("fa-IR")}
+              {doctorDetails?.averageRating?.toLocaleString()} از{" "}
+              {maxVote?.toLocaleString()}
             </span>
-            &nbsp;رضایت ({doctorDetails?.totalVotes?.toLocaleString("fa-IR")}{" "}
+            &nbsp;رضایت ({doctorDetails?.totalVotes?.toLocaleString()}{" "}
             نظر)
           </span>
         </div>

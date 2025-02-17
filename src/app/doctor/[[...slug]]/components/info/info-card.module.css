@@ -4,11 +4,10 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
 
     ul {
       display: flex;
-      justify-content: start;
       align-items: center;
       gap: 0.5rem;
 
@@ -16,7 +15,6 @@
 
       li button {
         display: flex;
-        justify-content: start;
         align-items: center;
         gap: 0.3rem;
 
@@ -37,8 +35,8 @@
       gap: 0.2rem;
 
       svg {
-        width: 1.3rem;
-        height: 1.3rem;
+        inline-size: 1.3rem;
+        block-size: 1.3rem;
       }
     }
   }
@@ -46,7 +44,6 @@
   .info {
     display: flex;
     align-items: center;
-    justify-content: start;
     gap: 0.8rem;
 
     padding: 1rem;
@@ -61,7 +58,7 @@
     span {
       font-size: var(--fz-100);
       display: inline-block;
-      margin-top: 1rem;
+      margin-block-start: 1rem;
     }
   }
 
@@ -87,7 +84,7 @@
 
       font-size: var(--fz-200);
 
-      margin-top: 2rem;
+      margin-block-start: 2rem;
 
       .ave_rate {
         background-color: var(--color-success-darker);

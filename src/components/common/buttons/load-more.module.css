@@ -1,5 +1,5 @@
 .btn {
-  width: 100%;
+  inline-size: 100%;
 
   background-color: inherit;
 
@@ -11,7 +11,7 @@
 
   border-radius: var(--border-radius);
 
-  margin-top: 2rem;
+  margin-block-start: 2rem;
 
   padding-block: 0.8rem;
 

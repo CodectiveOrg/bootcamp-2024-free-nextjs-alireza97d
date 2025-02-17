@@ -45,10 +45,10 @@ const ReviewsComponent: React.FC<Props> = ({
       <CardComponent>
         <div className={styles.rate}>
           <span className={styles.ave_rate}>
-            {averageRating.toLocaleString("fa-IR")} از{" "}
-            {maxVote?.toLocaleString("fa-IR")}
+            {averageRating.toLocaleString()} از{" "}
+            {maxVote?.toLocaleString()}
           </span>
-          &nbsp;رضایت ({totalVotes.toLocaleString("fa-IR")} نظر)
+          &nbsp;رضایت ({totalVotes.toLocaleString()} نظر)
         </div>
 
         <div>

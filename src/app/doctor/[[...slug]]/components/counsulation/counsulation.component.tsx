@@ -20,7 +20,7 @@ const CounsulationComponent: React.FC<Props> = ({ price }): ReactElement => {
             <OnlineTowCiecleFill />
             <span>همین الان آنلاین ویزیت شوید</span>
           </div>
-          <span>{price.toLocaleString("fa-IR")} تومان</span>
+          <span>{price.toLocaleString()} تومان</span>
         </div>
 
         <div className={styles.note}>

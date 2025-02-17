@@ -11,7 +11,6 @@
   .activity {
     ul li {
       display: flex;
-      justify-content: start;
       align-items: center;
       gap: 0.5rem;
 
@@ -25,8 +24,8 @@
       padding-block: 0.8rem;
 
       svg {
-        width: 1.4rem;
-        height: 1.4rem;
+        inline-size: 1.4rem;
+        block-size: 1.4rem;
       }
       .consulation_count {
         font-weight: 600;
@@ -34,7 +33,7 @@
     }
 
     ul li:not(:first-child) {
-      margin-top: 0.8rem;
+      margin-block-start: 0.8rem;
     }
   }
 }

@@ -28,7 +28,7 @@ const ActivitiesComponent: React.FC<Props> = ({
               <MingcuteCommentLine />
               <span>
                 <span className={styles.consulation_count}>
-                  {activeCounsulate.toLocaleString("fa-IR")}
+                  {activeCounsulate.toLocaleString()}
                 </span>
                 &nbsp;
                 <span>مشاوره فعال</span>

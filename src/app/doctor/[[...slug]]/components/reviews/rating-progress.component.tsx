@@ -24,7 +24,7 @@ const RatingProgressComponent: React.FC<Props> = ({
                   className={styles.progress_fill}
                 ></div>
               </div>
-              <span>{rating.rate.toLocaleString("fa-IR")}</span>
+              <span>{rating.rate.toLocaleString()}</span>
             </div>
           </div>
         );

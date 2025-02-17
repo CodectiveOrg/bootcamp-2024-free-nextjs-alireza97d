@@ -45,7 +45,7 @@ const ReviewItemComponent: React.FC<Props> = ({ review }): ReactElement => {
 
         <div className={styles.rate_container}>
           <span className={styles.rate}>
-            {review?.vote.toLocaleString("fa-IR")}
+            {review?.vote.toLocaleString()}
           </span>
 
           <div className={styles.more_btn}>
