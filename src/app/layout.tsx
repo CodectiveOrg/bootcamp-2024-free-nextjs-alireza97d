@@ -12,6 +12,7 @@ import "./globals.css";
 const vazirmatn = Vazirmatn({
   subsets: ["latin", "arabic"],
   display: "swap",
+  variable:"--vazir-font",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>): ReactElement {
   return (
-    <html lang="fa" dir="rtl" className={vazirmatn.className}>
+    <html lang="fa" dir="rtl" className={vazirmatn.variable}>
       <body>
         <HeaderComponent />
         <main>{children}</main>
