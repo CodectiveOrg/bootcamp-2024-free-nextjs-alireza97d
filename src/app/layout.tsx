@@ -18,51 +18,51 @@ const vazirmatn_FD = localFont({
   src: [
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Thin.woff2",
-      weight: '100',
-      style: 'normal',
+      weight: "100",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-ExtraLight.woff2",
-      weight: '200',
-      style: 'normal'
+      weight: "200",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Light.woff2",
-      weight: '300',
-      style: 'normal'
+      weight: "300",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Regular.woff2",
-      weight: '400',
-      style: 'normal'
+      weight: "400",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Medium.woff2",
-      weight: '500',
-      style: 'normal'
+      weight: "500",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-SemiBold.woff2",
-      weight: '600',
-      style: 'normal'
+      weight: "600",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Bold.woff2",
-      weight: '700',
-      style: 'normal'
+      weight: "700",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-ExtraBold.woff2",
-      weight: '800',
-      style: 'normal'
+      weight: "800",
+      style: "normal",
     },
     {
       path: "../public/fonts/vazirmatn/Vazirmatn-FD-Black.woff2",
-      weight: '900',
-      style: 'normal'
+      weight: "900",
+      style: "normal",
     },
   ],
-  variable: "--font-vazirmatn"
+  variable: "--font-vazirmatn",
 });
 
 export default function RootLayout({
