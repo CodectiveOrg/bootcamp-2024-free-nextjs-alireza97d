@@ -68,8 +68,7 @@
 
 html {
   color-scheme: light;
-  font-family: "Vazirmatn", system-ui;
-  font-feature-settings: "ss01";
+  font-family: var(--font-vazirmatn), system-ui, sans-serif;
   accent-color: var(--color-primary);
   caret-color: var(--color-primary);
 }
