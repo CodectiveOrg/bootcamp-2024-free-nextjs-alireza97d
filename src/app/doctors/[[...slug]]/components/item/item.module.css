@@ -2,22 +2,17 @@
   position: relative;
 
   padding: 1rem;
-  height: auto;
+  block-size: auto;
 
-  background-color: var(--color-gray-20);
+  background-color: var(--color-surface-700);
+  box-shadow: var(--shadow-400);
 
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
 
   .info {
     display: flex;
-    justify-content: start;
     align-items: start;
     gap: 0.8rem;
-  }
-
-  .image {
-    border-radius: 0.7rem;
-    border: 0.24rem solid var(--color-gray-98);
   }
 
   .name {
@@ -25,7 +20,7 @@
   }
 
   .brief {
-    margin-top: 0.2rem;
+    margin-block-start: 0.2rem;
     font-size: var(--fz-200);
   }
 
@@ -34,39 +29,38 @@
     align-items: center;
     gap: 0.15rem;
 
-    background-color: var(--color-gray-30);
+    background-color: var(--color-surface-300);
 
-    width: fit-content;
+    inline-size: fit-content;
 
     padding-block: 0.1rem;
     padding-inline: 0.2rem;
-    margin-top: 0.4rem;
+    margin-block-start: 0.4rem;
     border-radius: 0.2rem;
 
     font-size: var(--fz-100);
 
     .star {
-      color: var(--color-warning);
-      margin-top: 2px;
+      color: var(--color-star);
+      margin-block-start: 2px;
     }
   }
 
   .badge {
     display: flex;
-    justify-content: start;
     gap: 0.4rem;
 
     margin-block-start: 2rem;
 
     .badge_item {
-      background-color: var(--color-gray-40);
-      width: fit-content;
+      background-color: var(--color-surface-400);
+      inline-size: fit-content;
 
       font-size: var(--fz-100);
 
-      padding-block: 0.1rem;
-      padding-inline: 0.2rem;
-      border-radius: 0.2rem;
+      padding-block: 0.3rem;
+      padding-inline: 0.4rem;
+      border-radius: var(--border-radius);
     }
   }
 
@@ -74,6 +68,8 @@
     margin-block-start: 1.5rem;
 
     address {
+      color: var(--color-gray-40);
+
       font-style: normal;
       font-size: var(--fz-200);
 
@@ -83,7 +79,7 @@
 
       svg {
         flex-shrink: 0;
-        margin-top: 0.25rem;
+        margin-block-start: 0.25rem;
       }
     }
   }
@@ -97,19 +93,22 @@
     align-items: center;
     gap: 0.15rem;
 
+    font-size: var(--fz-200);
+
     background-color: var(--color-primary);
+    color: var(--color-primary-opposite);
 
     border: none;
-    border-radius: 0.2rem;
+    border-radius: var(--border-radius);
 
-    padding: 0.3rem;
+    padding: 0.5rem;
     cursor: pointer;
 
     transition: 0.2s ease-in-out;
     transition-property: background-color, color;
 
     &:hover {
-      background-color: var(--color-primary-fade);
+      background-color: var(--color-primary-darker);
       color: var(--color-primary-opposite);
     }
   }

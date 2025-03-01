@@ -1,10 +1,14 @@
 .clear {
-  width: 100%;
+  inline-size: 100%;
+
   border-radius: var(--border-radius);
 
   background-color: var(--color-danger);
+  color: var(--color-primary-opposite);
 
   cursor: pointer;
+
+  padding-block: 0.4rem;
 
   &:hover {
     background-color: var(--color-danger-darker);

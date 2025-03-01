@@ -1,0 +1,96 @@
+.container {
+  display: grid;
+  gap: 1rem;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: var(--fz-300);
+    }
+
+    .report {
+      display: flex;
+      justify-content: space-end;
+      align-items: center;
+      gap: 0.3rem;
+
+      font-size: var(--fz-100);
+
+      color: var(--color-primary-darker);
+
+      cursor: pointer;
+
+      svg {
+        inline-size: 1rem;
+        block-size: 1rem;
+      }
+    }
+  }
+
+  .contact {
+    background-color: var(--color-surface-400);
+    border-radius: var(--border-radius);
+
+    padding: 1rem;
+
+    strong {
+      display: inline-block;
+      font-size: var(--fz-300);
+      margin-block-end: 0.3rem;
+    }
+
+    address {
+      font-style: normal;
+      font-size: var(--fz-200);
+
+      span:first-of-type {
+        font-weight: bold;
+      }
+    }
+
+    .action_btn {
+      ul li {
+        margin-block-start: 1rem;
+
+        font-size: var(--fz-200);
+        font-weight: 600;
+      }
+
+      button {
+        inline-size: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        background-color: inherit;
+        color: var(--color-primary-darker);
+
+        border-radius: 0.4rem;
+        border: 1px solid var(--color-primary);
+
+        padding-block: 0.8rem;
+        padding-inline: 1rem;
+
+        cursor: pointer;
+
+        transition: 0.2s ease-in-out;
+        transition-property: background-color, color;
+
+        &:hover {
+          background-color: var(--color-primary-fade);
+        }
+
+        svg {
+          inline-size: 1.4rem;
+          block-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

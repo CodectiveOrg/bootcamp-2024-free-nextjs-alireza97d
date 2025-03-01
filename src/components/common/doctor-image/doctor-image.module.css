@@ -1,0 +1,6 @@
+.image {
+  border-radius: 0.7rem;
+  border: 0.2rem solid var(--color-border);
+
+  object-fit: cover;
+}
