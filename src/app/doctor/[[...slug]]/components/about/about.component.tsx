@@ -1,4 +1,8 @@
+"use client";
+
 import { ReactNode } from "react";
+
+import DOMPurify from "dompurify";
 
 import CardComponent from "@/components/card/card.component";
 
@@ -9,6 +13,8 @@ type Props = {
 };
 
 const AboutComponent: React.FC<Props> = ({ aboutText }): ReactNode => {
+  const sanitizedHTML = DOMPurify.sanitize(aboutText ?? "");
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -16,7 +22,7 @@ const AboutComponent: React.FC<Props> = ({ aboutText }): ReactNode => {
       </div>
       <CardComponent>
         <div
-          dangerouslySetInnerHTML={{ __html: aboutText ?? "" }}
+          dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
           className={styles.about}
         />
       </CardComponent>

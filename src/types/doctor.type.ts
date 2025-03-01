@@ -44,4 +44,6 @@ export interface DoctorModel {
   activeCounsulate: number;
   ratingProgress: RatingProgress[];
   doctorsReviews: DoctorsReviews[];
+  services: string[];
+  characteristics: string[];
 }

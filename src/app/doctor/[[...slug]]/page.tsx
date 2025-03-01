@@ -2,17 +2,19 @@ import { ReactElement } from "react";
 
 import { notFound } from "next/navigation";
 
-import ReviewsWrapperComponent from "./components/reviews/reviews-wrapper-component";
-import InfoCardComponent from "./components/info/info-card.component";
 import AboutComponent from "./components/about/about.component";
-import ReserveComponent from "./components/reserve/reserve.component";
-import ContactComponent from "./components/contact/contact.component";
-import ReviewsComponent from "./components/reviews/reviews.component";
-import CounsulationComponent from "./components/counsulation/counsulation.component";
 import ActivitiesComponent from "./components/activities/activities.component";
+import CharacteristicsComponent from "./components/characteristics/characteristics.component";
+import ContactComponent from "./components/contact/contact.component";
+import CounsulationComponent from "./components/counsulation/counsulation.component";
+import InfoCardComponent from "./components/info/info-card.component";
+import ReserveComponent from "./components/reserve/reserve.component";
+import ReviewsWrapperComponent from "./components/reviews/reviews-wrapper-component";
+import ReviewsComponent from "./components/reviews/reviews.component";
+import ServicesComponent from "./components/services/services.component";
 
-import { DoctorModel } from "@/types/doctor.type";
 import { doctorsData } from "@/models/doctors";
+import { DoctorModel } from "@/types/doctor.type";
 
 import styles from "./page.module.css";
 
@@ -56,10 +58,25 @@ const DoctorPage: React.FC<Props> = ({ params }): ReactElement => {
         </div>
 
         <div className="">
+          <ServicesComponent
+            doctorName={doctorDetails?.name}
+            services={doctorDetails?.services}
+          />
+        </div>
+
+        <div className="">
+          <CharacteristicsComponent
+            doctorName={doctorDetails?.name}
+            characteristics={doctorDetails?.characteristics}
+          />
+        </div>
+
+        <div className="">
           <ReviewsWrapperComponent
             doctorsReviews={doctorDetails?.doctorsReviews}
           >
             <ReviewsComponent
+              doctorName={doctorDetails?.name}
               totalVotes={doctorDetails?.totalVotes}
               averageRating={doctorDetails?.averageRating}
               doctorsReviews={doctorDetails?.doctorsReviews}

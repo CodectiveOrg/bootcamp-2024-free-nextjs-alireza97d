@@ -21,11 +21,11 @@
       border-radius: var(--border-radius);
 
       padding-inline: 1rem;
-      padding-block: 0.8rem;
+      padding-block: 1rem;
 
       svg {
-        inline-size: 1.4rem;
-        block-size: 1.4rem;
+        inline-size: 1.5rem;
+        block-size: 1.5rem;
       }
       .consulation_count {
         font-weight: 600;

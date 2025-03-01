@@ -1,0 +1,41 @@
+.services {
+  display: grid;
+  gap: 1rem;
+
+  .title {
+    h2 {
+      font-size: var(--fz-300);
+    }
+  }
+
+  .services-item {
+    ul {
+      border-right: 2px dotted var(--color-gray-80);
+
+      padding-inline-start: 0.75rem;
+
+      font-size: var(--fz-200);
+      line-height: 1.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+          inline-size: 1rem;
+          block-size: 1rem;
+        }
+      }
+
+      li span {
+        font-weight: 600;
+        font-size: var(--fz-300);
+      }
+    }
+
+    ul li:not(:first-child) {
+      margin-block-start: 0.5rem;
+    }
+  }
+}

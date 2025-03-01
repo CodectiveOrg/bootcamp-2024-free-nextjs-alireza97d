@@ -18,6 +18,7 @@ import styles from "./reviews.module.css";
 const maxVote = 5;
 
 type Props = {
+  doctorName: string;
   averageRating: number;
   totalVotes: number;
   doctorsReviews: DoctorsReviews[];
@@ -25,6 +26,7 @@ type Props = {
 };
 
 const ReviewsComponent: React.FC<Props> = ({
+  doctorName,
   averageRating,
   totalVotes,
   doctorsReviews,
@@ -38,7 +40,7 @@ const ReviewsComponent: React.FC<Props> = ({
         <h2>
           <span>نظرات در مورد دکتر</span>
           &nbsp;
-          <span>معصومه دلجو</span>
+          <span>{doctorName}</span>
         </h2>
       </div>
 
