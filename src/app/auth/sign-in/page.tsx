@@ -5,9 +5,9 @@ import SignInFormComponent from "@/app/auth/components/sign-in-form/sign-in-form
 import styles from "./page.module.css";
 
 export default function Page(): ReactElement {
-    return (
-        <div className={styles.page}>
-            <SignInFormComponent />
-        </div>
-    );
+  return (
+    <div className={styles.page}>
+      <SignInFormComponent />
+    </div>
+  );
 }
