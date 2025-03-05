@@ -1,6 +1,7 @@
 .normal-input {
   .label-text {
     font-size: var(--fz-300);
+    margin-block-end: 0.5rem;
   }
 
   .box {
