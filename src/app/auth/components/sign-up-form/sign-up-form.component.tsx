@@ -104,6 +104,6 @@ const SignUpFormComponent = (): ReactElement => {
       </CardComponent>
     </div>
   );
-}
+};
 
 export default SignUpFormComponent;
