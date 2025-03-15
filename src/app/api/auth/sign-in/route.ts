@@ -4,7 +4,7 @@ import { SignInDto } from "@/dto/auth.dto";
 
 import prisma from "@/lib/prisma";
 
-import { ApiResponseType } from "@/types/api.response";
+import { ApiResponseType } from "@/types/api-response.type";
 
 import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
 

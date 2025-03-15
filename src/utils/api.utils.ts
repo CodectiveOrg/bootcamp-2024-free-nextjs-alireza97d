@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import * as jose from "jose";
 
-import { ApiResponseType } from "@/types/api.response";
+import { ApiResponseType } from "@/types/api-response.type";
 
 type ParseBodyResult<T> = [error: null, data: T] | [error: string, data: null];
 
@@ -61,6 +61,11 @@ export async function setAuthCookie(): Promise<void> {
         sameSite: "none",
         maxAge: 3 * 24 * 3600,
     });
+}
+
+export async function removeAuthCookie(): Promise<void> {
+    const cookieStore = cookies();
+    cookieStore.delete(process.env.TOKEN_KEY!);
 }
 
 export async function isSignedIn(request: NextRequest): Promise<boolean> {
