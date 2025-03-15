@@ -6,7 +6,8 @@ import prisma from "@/lib/prisma";
 
 import { ApiResponseType } from "@/types/api-response.type";
 
-import { parseBody,setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
+import { parseBody, setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
+import { hashPassword } from "@/utils/bcrypt.utils";
 
 export async function POST(request: Request): Promise<ApiResponseType<null>> {
     return wrapWithTryCatch(async () => {
@@ -38,7 +39,8 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
             );
         };
 
-        await prisma.user.create({ data: body });
+        const hashedPassword = await hashPassword(body.password);
+        await prisma.user.create({ data: { ...body, password: hashedPassword } });
 
         await setAuthCookie();
 
