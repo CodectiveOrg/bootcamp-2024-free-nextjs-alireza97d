@@ -4,6 +4,7 @@ import { FormEvent, ReactElement, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import signInImage from "@/assets/images/sign-in.webp";
 
@@ -21,35 +22,38 @@ import { fetchWithToast } from "@/utils/fetch-utils";
 import styles from "@/app/auth/styles/auth-form.module.css";
 
 export default function SignInFormComponent(): ReactElement {
-    const formRef = useRef<HTMLFormElement>(null);
-  
-    const formSubmitHandler = async (
-      e: FormEvent<HTMLFormElement>,
-    ): Promise<void> => {
-      e.preventDefault();
-  
-      const formData = new FormData(e.currentTarget);
-  
-      const dto: SignInDto = {
-        username: formData.get("username") as string,
-        password: formData.get("password") as string,
-      };
-  
-      const result = await fetchWithToast<null>(
-        "/api/auth/sign-in",
-        {
-          method: "POST",
-          body: JSON.stringify(dto),
-        },
-        "خوش آمدید.",
-      );
-  
-      if (result.error) {
-        return;
-      }
-  
-      formRef.current?.reset();
+  const router = useRouter();
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const formSubmitHandler = async (
+    e: FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const dto: SignInDto = {
+      username: formData.get("username") as string,
+      password: formData.get("password") as string,
     };
+
+    const result = await fetchWithToast<null>(
+      "/api/auth/sign-in",
+      {
+        method: "POST",
+        body: JSON.stringify(dto),
+      },
+      "خوش آمدید.",
+    );
+
+    if (result.error) {
+      return;
+    }
+
+    formRef.current?.reset();
+    router.push("/dashboard");
+  };
   return (
     <div className={styles["auth-form"]}>
       <CardComponent>

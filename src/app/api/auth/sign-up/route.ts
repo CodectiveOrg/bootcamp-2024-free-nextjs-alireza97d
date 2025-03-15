@@ -6,7 +6,7 @@ import prisma from "@/lib/prisma";
 
 import { ApiResponseType } from "@/types/api.response";
 
-import { parseBody, wrapWithTryCatch } from "@/utils/api.utils";
+import { parseBody,setAuthCookie, wrapWithTryCatch } from "@/utils/api.utils";
 
 export async function POST(request: Request): Promise<ApiResponseType<null>> {
     return wrapWithTryCatch(async () => {
@@ -39,6 +39,8 @@ export async function POST(request: Request): Promise<ApiResponseType<null>> {
         };
 
         await prisma.user.create({ data: body });
+
+        await setAuthCookie();
 
         return NextResponse.json({ data: null }, { status: 201 });
     });
