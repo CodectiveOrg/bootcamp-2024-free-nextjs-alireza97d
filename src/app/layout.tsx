@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 
 import FooterComponent from "@/components/footer/footer.component";
 import HeaderComponent from "@/components/header/header.component";
+import ToasterComponent from "@/components/toaster/toaster.component";
 
 import "@/styles/typography.css";
 import "./globals.css";
@@ -79,6 +80,7 @@ export default function RootLayout({
           نوبت دهی پزشکی، سامانه نوبت دهی اینترنتی بیمارستان و پزشکان
         </p>
         <FooterComponent />
+        <ToasterComponent />
       </body>
     </html>
   );
